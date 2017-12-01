@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './work.css'
 
-class Work extends Component {
+class Projects extends Component {
 
 
   render() {
@@ -18,4 +18,4 @@ class Work extends Component {
   }
 }
 
-export default Work;
+export default Projects;

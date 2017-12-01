@@ -20,9 +20,9 @@ class About extends Component {
             </div>
 
             </div>
-            <div className='top_right'></div>
+            {/* <div className='top_right'></div>
             <div className='bottom_left'></div>
-            <div className='bottom_right'></div>
+            <div className='bottom_right'></div> */}
 
         </div>
      
