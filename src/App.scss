@@ -14,8 +14,8 @@ button {
   width: 100vw;
   border: 12px solid transparent;
   border-right: 400px solid transparent;
-  border-image: linear-gradient(45deg, rgb(59, 129, 209), rgb(86, 59, 209), rgb(59, 129, 209));
-  border-image: linear-gradient(45deg, #fe8c00, #f83600, #fe8c00);
+  // border-image: linear-gradient(45deg, rgb(59, 129, 209), rgb(86, 59, 209), rgb(59, 129, 209));
+  // border-image: linear-gradient(45deg, #fe8c00, #f83600, #fe8c00);
   border-image: linear-gradient(45deg, #7474bf, #348ac7, #7474bf);
   border-image-slice: 1;
   font-size: 30px;
@@ -76,12 +76,6 @@ button {
   border:3px solid white;
   border-radius: 50%;
   box-shadow: 0 0 5px rgba(112, 112, 112, 0.349);
-}
-
-svg path{
-  fill: rgb(73,94,209);
-  fill: #f83600;
-  fill: #547FC3;
 }
 
 .social_links{
@@ -247,6 +241,21 @@ svg path{
       font-size: 40px;
       color:#547FC3;
       // border-bottom:2px solid rgba(0,0,0,.1);
+    }
+    .links{
+      grid-row: 9/11;
+      display: flex;
+      // border: 1px solid red;
+      align-items: center;
+      justify-content: center;
+      svg{
+        margin:0 15px;
+      }
+      svg path{
+        fill: #FAFAFA;
+        width: 100px;
+        height: 100px;
+      }
     }
 }
 

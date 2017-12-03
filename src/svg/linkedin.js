@@ -4,7 +4,7 @@ export default class App extends Component {
   render() {
     return (
     
-      <svg viewBox="0 0 18 18" width='30px' height='30px'>
+      <svg viewBox="0 0 18 18" width='42px' height='42px'>
 <g>
 	<g id="Layer_1_106_">
 		<g>

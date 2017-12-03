@@ -146,6 +146,10 @@ class App extends Component {
               <button onClick={()=>{this.scroll_to_section('two')}} className={this.state.section===2?'highlight-btn skills-btn':'unhighlight-btn skills-btn'}>Skills</button>
               <button onClick={()=>{this.scroll_to_section('three')}} className={this.state.section===3?'highlight-btn projects-btn':'unhighlight-btn projects-btn'}>Projects</button>
               <button onClick={()=>{this.scroll_to_section('four')}} className={this.state.section===4?'highlight-btn contact-btn':'unhighlight-btn contact-btn'}>Contact</button>
+              <div className='links'>
+              <Linkedin/>
+              <GitHub/>
+              </div>
           </div>
           {/* <div className='side_bar'></div>
           <div className='side_bar_spacer'></div> */}

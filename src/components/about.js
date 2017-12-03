@@ -8,7 +8,7 @@ class About extends Component {
     return (
       
         <div className='about_grid'>
-
+            <div className='cover_grid'></div>
             <div className='top_left'>
             <h3>Hey, I'm Chase Davis</h3>
 

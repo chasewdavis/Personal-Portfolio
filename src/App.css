@@ -12,8 +12,6 @@ button {
   width: 100vw;
   border: 12px solid transparent;
   border-right: 400px solid transparent;
-  border-image: linear-gradient(45deg, #3b81d1, #563bd1, #3b81d1);
-  border-image: linear-gradient(45deg, #fe8c00, #f83600, #fe8c00);
   border-image: linear-gradient(45deg, #7474bf, #348ac7, #7474bf);
   border-image-slice: 1;
   font-size: 30px;
@@ -66,11 +64,6 @@ button {
   border: 3px solid white;
   border-radius: 50%;
   box-shadow: 0 0 5px rgba(112, 112, 112, 0.349); }
-
-svg path {
-  fill: #495ed1;
-  fill: #f83600;
-  fill: #547FC3; }
 
 .social_links {
   z-index: 1;
@@ -214,6 +207,17 @@ svg path {
     border-radius: 0;
     font-size: 40px;
     color: #547FC3; }
+  .fixed-right-navbar .links {
+    grid-row: 9/11;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .fixed-right-navbar .links svg {
+      margin: 0 15px; }
+    .fixed-right-navbar .links svg path {
+      fill: #FAFAFA;
+      width: 100px;
+      height: 100px; }
 
 @keyframes grow {
   25% {
