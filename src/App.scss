@@ -1,5 +1,6 @@
 *{
   box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
 }
 
 button {
@@ -9,7 +10,7 @@ button {
 
 .content_window {
   position: relative;
-  background: whitesmoke;
+  background: #fafafa;
   height:100vh;
   width: 100vw;
   border: 12px solid transparent;
@@ -248,13 +249,36 @@ button {
       // border: 1px solid red;
       align-items: center;
       justify-content: center;
-      svg{
-        margin:0 15px;
-      }
+      // svg{
+      //   margin:0 15px;
+      // }
       svg path{
         fill: #FAFAFA;
         width: 100px;
         height: 100px;
+      }
+    }
+    a{
+      text-decoration: none;
+      margin: 0 17px;
+    }
+    .circle_link{
+      border: 6px solid #fafafa;
+      width:59px;
+      height: 59px;
+      transform: scale(.65);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      i {
+        color:white;
+      }
+    }
+    .no_circle_link{
+      transform: scale(1.37); //1.17 to match size of other icons
+      i {
+        color:white;
       }
     }
 }

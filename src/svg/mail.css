@@ -1,0 +1,16 @@
+.mail_container{
+    width: 42px;
+    height: 42px;
+    border: 4px solid #fafafa;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mail_container svg{
+    position: absolute;
+    /* top:6px; */
+    /* right: -9px; */
+}

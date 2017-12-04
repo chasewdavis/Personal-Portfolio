@@ -8,6 +8,7 @@ import AboutMe from './components/about.js';
 import Skills from './components/skills.js';
 import Projects from './components/projects.js';
 import Contact from './components/contact.js';
+import Mail from './svg/mail.js';
 
 //to prevent setting state hundreds more times than we need to
 let state_set_1 = false;
@@ -147,8 +148,21 @@ class App extends Component {
               <button onClick={()=>{this.scroll_to_section('three')}} className={this.state.section===3?'highlight-btn projects-btn':'unhighlight-btn projects-btn'}>Projects</button>
               <button onClick={()=>{this.scroll_to_section('four')}} className={this.state.section===4?'highlight-btn contact-btn':'unhighlight-btn contact-btn'}>Contact</button>
               <div className='links'>
-              <Linkedin/>
-              <GitHub/>
+              <a target="_blank" href="https://www.linkedin.com/in/chase-davis-085aa6134/">
+                <div className='circle_link'>
+                  <i className="fa fa-linkedin" aria-hidden="true"></i>
+                </div>
+              </a>
+              <a target="_blank" href="https://github.com/chasewdavis">
+                <div className='no_circle_link'>
+                  <i className="fa fa-github fa-lg" aria-hidden="true"></i>
+                </div>
+              </a>
+              <a target="_blank" href="mailto: chasewdavis7@gmail.com">
+                <div className='circle_link'>
+                  <i className="fa fa-envelope" aria-hidden="true"></i>
+                </div>
+              </a>
               </div>
           </div>
           {/* <div className='side_bar'></div>

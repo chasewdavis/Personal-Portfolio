@@ -40,8 +40,6 @@
 
 .top_left h3 {
   color: transparent;
-  font-family: 'Nunito';
-  /* font-family: 'Varela Round'; */
   font-size: 34px;
   margin-bottom: 25px;
   animation: fade_in_color 2.4s;
@@ -50,7 +48,6 @@
 .top_left p {
   margin-top: 14px;
   font-size: 30px;
-  font-family: 'Nunito';
   color: transparent;
   animation: fade_in_dark 2.4s;
   animation-fill-mode: forwards; }

@@ -1,0 +1,48 @@
+
+
+.projects_grid{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(18,18FR);
+    grid-template-rows: repeat(18,18FR);
+    .title{
+        grid-row: 1/4;
+        grid-column: 1/19;
+        font-size: 90px;
+        padding: 0 40px;
+        opacity: .999;
+        color: white;
+        opacity: .75;
+        display: flex;
+        align-items: center;
+        // border: 1px solid green;
+    }
+    .projects_background{
+        z-index: 0;
+        background:url('../jpg/desk.jpeg');
+        background-position: center;
+        background-size: cover;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top:0;
+        .overlay{
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, #7474bf, #348ac7, #7474bf);
+            opacity: .5;
+        }
+    }
+    .laptop_container{
+        z-index: 1;
+        grid-row: 4/18;
+        grid-column: 2/18;
+        // border:1px solid red;
+        // position: relative;
+        img{
+            width: 100%;
+        }
+    }
+}
