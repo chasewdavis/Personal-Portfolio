@@ -1,3 +1,5 @@
+@import "./variables.scss";
+
 *{
   box-sizing: border-box;
   font-family: 'Lato', sans-serif;
@@ -17,7 +19,9 @@ button {
   border-right: 400px solid transparent;
   // border-image: linear-gradient(45deg, rgb(59, 129, 209), rgb(86, 59, 209), rgb(59, 129, 209));
   // border-image: linear-gradient(45deg, #fe8c00, #f83600, #fe8c00);
-  border-image: linear-gradient(45deg, #7474bf, #348ac7, #7474bf);
+  // border-image: linear-gradient(45deg, #7474bf, #348ac7, #7474bf);
+  border-image: linear-gradient(45deg, #fafafa, #fafafa);
+
   border-image-slice: 1;
   font-size: 30px;
   /* padding-top: 25px; */
@@ -67,7 +71,7 @@ button {
 .location_box_hilighted {
   z-index: 1;
   
-  background-color: #547FC3;
+  background-color: $main_color;
   
   position: fixed;
   width:30px;
@@ -168,17 +172,19 @@ button {
   left: 20px;
   width:20px;
   opacity: 0;
-  animation: appear .84s;
+  animation: appear 1.2s;
   animation-fill-mode: forwards;
 }
 
 .fixed-right-navbar {
   opacity: 0;
-  animation: appear 2.4s;
+  // // animation: appear 2.4s;
+  animation: appear .6s;
   animation-fill-mode: forwards;
   position: fixed;
   right: 12px;
-  background-color: rgba(0,0,0,.2);
+  // background-color: rgba(0,0,0,.2);
+  background:$main_color;
   width: 388px;
   height: calc(100vh - 24px);
   display: grid;
@@ -226,7 +232,7 @@ button {
     }
     .highlight-btn{
       // background: #FAFAFA;
-      color:#547FC3;
+      color:$main_color;
       animation: fade-in-btns .82s;
       animation-fill-mode: forwards;
     }
@@ -240,7 +246,7 @@ button {
       border: none;
       border-radius:0; 
       font-size: 40px;
-      color:#547FC3;
+      color:$main_color;
       // border-bottom:2px solid rgba(0,0,0,.1);
     }
     .links{
@@ -276,7 +282,7 @@ button {
       }
     }
     .no_circle_link{
-      transform: scale(1.37); //1.17 to match size of other icons
+      transform: scale(1.35); //1.17 to match size of other icons
       i {
         color:white;
       }
@@ -309,7 +315,7 @@ button {
     border-bottom: 3px solid white;
   }
   100%{
-    color: #547FC3;
+    color: $main_color;
     border-bottom: 3px solid whitesmoke;
   }
 }

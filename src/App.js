@@ -28,6 +28,7 @@ class App extends Component {
   }
 
   checkScrollHeight(){
+    console.log('hi');
     let currentHeight = document.getElementsByClassName('content_window')[0].scrollTop;
 
     let about_Y = document.getElementById('one').offsetTop;

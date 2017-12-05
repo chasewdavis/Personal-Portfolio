@@ -1,4 +1,5 @@
 /* Ropa+Sans|Varela+Round */
+@import url("https://fonts.googleapis.com/css?family=Amatic+SC|Josefin+Slab|Kaushan+Script|Nothing+You+Could+Do|Permanent+Marker");
 .about_grid {
   /* margin-left: 60px; */
   width: 100%;
@@ -10,13 +11,43 @@
   display: grid;
   grid-template-columns: repeat(5, 5FR);
   grid-template-rows: repeat(5, 5FR); }
+  .about_grid header {
+    grid-row: 1/3;
+    grid-column: 1/6;
+    padding: 25px;
+    color: white;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column; }
+    .about_grid header h1 {
+      font-family: "Kaushan Script";
+      opacity: 0;
+      font-size: 80px;
+      transform: translateX(200px);
+      animation: title-appear 1s;
+      animation-fill-mode: forwards; }
+    .about_grid header h2 {
+      font-family: "Kaushan Script";
+      font-size: 70px;
+      opacity: 0;
+      transform: translateX(200px);
+      animation: title-appear 1s;
+      animation-fill-mode: forwards;
+      animation-delay: 1s; }
+    .about_grid header h3 {
+      font-family: "Kaushan Script";
+      font-size: 60px;
+      opacity: 0;
+      transform: translateX(200px);
+      animation: title-appear 1s;
+      animation-fill-mode: forwards;
+      animation-delay: 2s; }
   .about_grid .cover_grid {
     grid-row: 1/6;
     grid-column: 1/6;
     z-index: 0;
-    background: #348ac7;
-    background: linear-gradient(90deg, #7474bf, #348ac7, #7474bf);
-    opacity: .65; }
+    opacity: .85; }
 
 .top_left {
   z-index: 0;
@@ -69,18 +100,13 @@
   animation-fill-mode: forwards;
   animation-timing-function: ease; }
 
-@keyframes fade_in_color {
-  50% {
-    color: transparent; }
+@keyframes title-appear {
+  75% {
+    transform: translateX(-10px);
+    opacity: .5; }
   100% {
-    color: #495ed1;
-    color: #547FC3; } }
-
-@keyframes fade_in_dark {
-  50% {
-    color: transparent; }
-  100% {
-    color: #1f1f1f; } }
+    transform: translateX(0);
+    opacity: .5; } }
 
 @keyframes slide_left {
   80% {

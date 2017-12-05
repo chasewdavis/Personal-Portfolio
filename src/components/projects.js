@@ -15,6 +15,9 @@ class Projects extends Component {
           <div className='laptop_container'>
             <img src={laptop} alt='laptop frame'/>
           </div>
+          <i onClick={() => console.log('left')} className="left-arrow fa fa-chevron-circle-left fa-3x" aria-hidden="true"></i>
+          <i onClick={() => console.log('right')} className="right-arrow fa fa-chevron-circle-right fa-3x" aria-hidden="true"></i>
+          <footer>Title of Project</footer>
         </div>
     );
   }

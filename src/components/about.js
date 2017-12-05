@@ -9,7 +9,13 @@ class About extends Component {
       
         <div className='about_grid'>
             <div className='cover_grid'></div>
-            <div className='top_left'>
+            <header>
+            <h1>Developer</h1>
+            <h2>Designer</h2>
+            <h3>Doer</h3>
+            </header>
+
+            {/* <div className='top_left'>
             <h3>Hey, I'm Chase Davis</h3>
 
             <div className='paragraphs'>
@@ -19,7 +25,7 @@ class About extends Component {
             <p>I'm constantly working new and exciting projects so feel free to explore some of my <span>latest work</span>.</p>
             </div>
 
-            </div>
+            </div> */}
             {/* <div className='top_right'></div>
             <div className='bottom_left'></div>
             <div className='bottom_right'></div> */}

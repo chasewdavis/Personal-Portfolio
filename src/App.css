@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Amatic+SC|Josefin+Slab|Kaushan+Script|Nothing+You+Could+Do|Permanent+Marker");
 * {
   box-sizing: border-box;
   font-family: 'Lato', sans-serif; }
@@ -13,7 +14,7 @@ button {
   width: 100vw;
   border: 12px solid transparent;
   border-right: 400px solid transparent;
-  border-image: linear-gradient(45deg, #7474bf, #348ac7, #7474bf);
+  border-image: linear-gradient(45deg, #fafafa, #fafafa);
   border-image-slice: 1;
   font-size: 30px;
   /* padding-top: 25px; */
@@ -56,7 +57,7 @@ button {
 
 .location_box_hilighted {
   z-index: 1;
-  background-color: #547FC3;
+  background-color: #223450;
   position: fixed;
   width: 30px;
   height: 30px;
@@ -147,16 +148,16 @@ button {
   left: 20px;
   width: 20px;
   opacity: 0;
-  animation: appear .84s;
+  animation: appear 1.2s;
   animation-fill-mode: forwards; }
 
 .fixed-right-navbar {
   opacity: 0;
-  animation: appear 2.4s;
+  animation: appear .6s;
   animation-fill-mode: forwards;
   position: fixed;
   right: 12px;
-  background-color: rgba(0, 0, 0, 0.2);
+  background: #223450;
   width: 388px;
   height: calc(100vh - 24px);
   display: grid;
@@ -195,7 +196,7 @@ button {
     grid-row: 8/9;
     background: transparent; }
   .fixed-right-navbar .highlight-btn {
-    color: #547FC3;
+    color: #223450;
     animation: fade-in-btns .82s;
     animation-fill-mode: forwards; }
   .fixed-right-navbar .unhighlight-btn {
@@ -207,7 +208,7 @@ button {
     border: none;
     border-radius: 0;
     font-size: 40px;
-    color: #547FC3; }
+    color: #223450; }
   .fixed-right-navbar .links {
     grid-row: 9/11;
     display: flex;
@@ -232,7 +233,7 @@ button {
     .fixed-right-navbar .circle_link i {
       color: white; }
   .fixed-right-navbar .no_circle_link {
-    transform: scale(1.37); }
+    transform: scale(1.35); }
     .fixed-right-navbar .no_circle_link i {
       color: white; }
 
@@ -255,7 +256,7 @@ button {
     color: rgba(73, 94, 209, 0);
     border-bottom: 3px solid white; }
   100% {
-    color: #547FC3;
+    color: #223450;
     border-bottom: 3px solid whitesmoke; } }
 
 @keyframes fade-in-btns {
