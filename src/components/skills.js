@@ -27,7 +27,7 @@ class Skills extends Component {
               <div>
                 <h3>Angular</h3>
                 <p>JavaScript based front-end framework</p>
-                <p>Angular has allowed me to organize individual pieces of my projects in an efficient manner, utilizing the MVC architecure</p>
+                <p>Angular has allowed me to organize individual pieces of my projects in an efficient manner, utilizing the MVC architecure.</p>
               </div>
             </div>
             <div className='logo_container lc3'><Node/>

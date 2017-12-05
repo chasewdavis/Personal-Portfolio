@@ -19,7 +19,8 @@
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
-    flex-direction: column; }
+    flex-direction: column;
+    position: relative; }
     .about_grid header h1 {
       font-family: "Kaushan Script";
       opacity: 0;
@@ -43,11 +44,18 @@
       animation: title-appear 1s;
       animation-fill-mode: forwards;
       animation-delay: 2s; }
+    .about_grid header h4 {
+      font-family: "Kaushan Script";
+      position: absolute;
+      font-size: 70px;
+      right: 45px;
+      opacity: .5; }
   .about_grid .cover_grid {
     grid-row: 1/6;
     grid-column: 1/6;
     z-index: 0;
-    opacity: .85; }
+    background: black;
+    opacity: .1; }
 
 .top_left {
   z-index: 0;

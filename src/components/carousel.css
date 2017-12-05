@@ -1,9 +1,43 @@
-.carousel {
-  width: 500px;
-  height: 500px;
-  border: 2px solid black; }
-
-.legend {
-  border: 1px solid red;
-  width: 100%;
-  height: 100%; }
+@charset "UTF-8";
+@import url(~slick-carousel/slick/slick.css);
+@import url(~slick-carousel/slick/slick-theme.css);
+.laptop-parent {
+  position: relative;
+  width: 920px;
+  height: 575px;
+  left: 50%;
+  transform: translate(-460px, calc( -575px / 2));
+  top: 50%; }
+  .laptop-parent .laptop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; }
+  .laptop-parent .slider {
+    position: absolute;
+    top: 49px;
+    left: 50%;
+    transform: translateX(-334px);
+    width: 668px;
+    height: 417.6px; }
+    .laptop-parent .slider img {
+      width: 668px;
+      height: 417.6px; }
+  .laptop-parent .slick-next {
+    width: 100px;
+    height: 100px;
+    transform: translate(120px, -50px); }
+    .laptop-parent .slick-next::before {
+      content: "";
+      font-family: FontAwesome;
+      color: white;
+      font-size: 80px; }
+  .laptop-parent .slick-prev {
+    width: 100px;
+    height: 100px;
+    transform: translate(-120px, -50px); }
+    .laptop-parent .slick-prev::before {
+      content: "";
+      color: white;
+      font-family: FontAwesome;
+      font-size: 80px; }

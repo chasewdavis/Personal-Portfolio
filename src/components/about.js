@@ -13,6 +13,7 @@ class About extends Component {
             <h1>Developer</h1>
             <h2>Designer</h2>
             <h3>Doer</h3>
+            <h4>Chase Davis</h4>
             </header>
 
             {/* <div className='top_left'>
