@@ -1,8 +1,9 @@
 .contact_grid{
     // margin-left: 60px;
     /* height: calc(100% * 2/3); */
-    height: 100%;
-    width: 100%;
+    width: calc(100% - 400px);
+    height: 100vh;
+    margin-right: 400px;
     // background: rgb(225, 225, 225);
     border: 1px solid fuchsia;
 }

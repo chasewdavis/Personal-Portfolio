@@ -1,7 +1,8 @@
 .projects_grid {
   position: relative;
-  height: 100%;
-  width: 100%;
+  width: calc(100% - 400px);
+  height: 100vh;
+  margin-right: 400px;
   display: grid;
   grid-template-columns: repeat(18, 18FR);
   grid-template-rows: repeat(18, 18FR); }
@@ -55,7 +56,7 @@
     justify-content: flex-end; }
   .projects_grid footer {
     z-index: 5;
-    grid-row: 16/19;
+    grid-row: 15/19;
     grid-column: 1/19;
     padding-right: 25px;
     color: white;
@@ -63,10 +64,11 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    font-size: 60px;
-    transform: translateX(100%);
-    animation: slide-in-footer .6s;
-    animation-fill-mode: forwards; }
+    font-size: 60px; }
+    .projects_grid footer span {
+      transform: translateX(100%);
+      animation: slide-in-footer .6s;
+      animation-fill-mode: forwards; }
 
 @keyframes slide-in-footer {
   100% {

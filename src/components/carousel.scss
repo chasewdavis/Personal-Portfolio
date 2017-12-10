@@ -1,15 +1,15 @@
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
+@import "../variables.scss";
 
 .laptop-parent{
-    position: relative;
-    
+    position: absolute; 
     width: 920px;
     height: 575px;
     left: 50%;
-    transform: translate(-460px, calc( -575px / 2));
+    transform: translate(-460px, calc( ( -575px / 2) + 10px ));
     top:50%;
-    // border: 1px solid blue;
+    // border: 3px solid blue;
 
     .laptop{
         position: absolute;
@@ -26,10 +26,36 @@
         transform: translateX(-334px);
         width:668px;
         height: 417.6px;
-
+        .img_container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        // button 
+        .visit{
+            position: absolute;
+            width: 668px;
+            height: 50px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.45); 
+            border-radius: 0px;
+            border: none;
+            background: none;
+            color: white;
+            font-family: 'lato';
+            font-size: 185px;
+            text-shadow: 0 0 30px rgba(0, 0, 0, 0.55);
+            opacity: 0;
+            transition: opacity .5s;
+            height: 100%;
+            cursor: pointer;
+            &:hover{
+                opacity: .8;
+            }
+        }
         img{
             width:668px;
             height: 417.6px;
+            cursor: pointer;
         }
     
     }

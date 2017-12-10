@@ -52,3 +52,8 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
+
+body{
+    padding: 0 12px;
+    background: #FAFAFA;
+}
