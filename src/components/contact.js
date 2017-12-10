@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './contact.css'
 
-// import ReactSlickDemo from './carousel.js';
 
 class Contact extends Component {
 
@@ -11,8 +10,7 @@ class Contact extends Component {
       
         <div className='contact_grid'>
         
-            {/* {Carousel} */}
-            {/* <ReactSlickDemo/> */}
+            
 
         </div>
      

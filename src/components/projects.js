@@ -9,7 +9,7 @@ class Projects extends Component {
   constructor(props){
     super(props)
 
-    //  MUST ADD INDEX TO PROJECTID WHEN ADDING NEW PROJECT
+    //  MUST ADD TITLE TO PROJECT ARRAY WHEN ADDING NEW PROJECT
     this.state = {
       project: ['Personal Habit Tracker', 'Code Wars Clone'],
       current: 0

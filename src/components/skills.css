@@ -4,9 +4,10 @@
   margin-right: 400px; }
 
 .skills_title {
-  margin-top: 25px;
-  margin-left: 42px;
-  font-size: 100px;
+  margin-top: 55px;
+  margin-bottom: 5px;
+  margin-left: 40px;
+  font-size: 80px;
   font-weight: 100;
   opacity: .2;
   text-align: left; }
@@ -44,7 +45,7 @@
       width: 100%;
       height: 100%;
       transition: transform .8s, opacity .5s;
-      transform: scale(0.75); }
+      transform: scale(0.68); }
     .skills_grid .logo_container:hover div {
       visibility: visible;
       opacity: 1; }

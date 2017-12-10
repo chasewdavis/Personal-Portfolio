@@ -5,6 +5,7 @@
   "dependencies": {
     "jump.js": "^1.0.2",
     "node-sass-chokidar": "0.0.3",
+    "nodemailer": "^4.4.1",
     "npm-run-all": "^4.1.2",
     "react": "^16.1.0",
     "react-dom": "^16.1.0",
