@@ -1,52 +1,9 @@
 import React, { Component } from 'react';
 import './contact.css';
-import axios from 'axios';
+
 
 
 class Contact extends Component {
-
-  constructor(props){
-    super(props)
-
-    this.state = {
-      name: '',
-      company: '',
-      email: '',
-      phone: '',
-      messege: ''
-    }
-  }
-
-  send(){
-    let name = this.state.name, company = this.state.company;
-    let email = this.state.email;
-    let phone = this.state.phone;
-    let messege = this.state.messege;
-
-    axios.post('/send', 
-      { 
-      'name': name,
-      'company': company,
-      'email': email,
-      'phone': phone,
-      'message': messege
-      }
-    ).then(res => console.log(res))
-  }
-
-  handleChange(val, type){
-    if(type==='name'){
-      this.setState({name:val})
-    }else if( type==='company'){
-      this.setState({company:val})
-    }else if( type==='email' ){
-      this.setState({email:val})
-    }else if( type==='phone'){
-      this.setState({phone:val})
-    }else if( type==='messege'){
-      this.setState({messege:val})
-    }
-  }
 
   render() {
 
@@ -55,17 +12,31 @@ class Contact extends Component {
     return (
       
       <div className='contact_grid'>
-
-        <form>
-          <div>name: <input onChange={ (e) => this.handleChange(e.target.value, 'name') }/> </div>
-          <div>company: <input onChange={ (e) => this.handleChange(e.target.value, 'company') }/> </div>
-          <div>email: <input onChange={ (e) => this.handleChange(e.target.value, 'email') }/> </div>
-          <div>phone: <input onChange={ (e) => this.handleChange(e.target.value, 'phone') }/> </div>
-          <div>messege: <input onChange={ (e) => this.handleChange(e.target.value, 'messege') }/> </div>
-        </form>
-
-        <button onClick={ () => this.send()} type='submit'>submit</button>
-
+        {/* <div className='background'></div> */}
+        <h3 className='header'>Get In Touch</h3>
+        <div className='body'>
+          <div className='left'>
+            <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/chase-davis-085aa6134/">
+              <i class="fa fa-linkedin-square fa-5x" aria-hidden="true"></i>
+            </a>
+            <h2>/in/cwdvs</h2>
+          </div>
+          <div className='middle'>
+            <a target="_blank" rel="noopener noreferrer" href="mailto: chasewdavis7@gmail.com">
+              <i class="fa fa-telegram fa-5x" aria-hidden="true"></i>
+            </a>
+            <h2>chasewdavis7@gmail.com</h2>
+          </div>
+          <div className='right'>
+            <a target="_blank" rel="noopener noreferrer" href="https://github.com/chasewdavis">
+              <i class="fa fa-github-square fa-5x" aria-hidden="true"></i>
+            </a>
+            <h2>/chasewdavis</h2>
+          </div>
+        </div>
+        <div className='footer'>
+          Designed and crafted by me, Chase Davis © 2017
+        </div>
       </div>
      
     );

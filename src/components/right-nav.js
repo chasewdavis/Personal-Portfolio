@@ -11,10 +11,10 @@ export default class RightNav extends Component {
             <div className='fixed-right-navbar'>
                 <div className='img-container'></div>
                 <div className='img-filler'></div>
-                <button onClick={()=>{jump('#one')}} className={this.props.section===1?'highlight-btn about-btn':'unhighlight-btn about-btn'}>About</button>
-                <button onClick={()=>{jump('#two')}} className={this.props.section===2?'highlight-btn skills-btn':'unhighlight-btn skills-btn'}>Skills</button>
-                <button onClick={()=>{jump('#three')}} className={this.props.section===3?'highlight-btn projects-btn':'unhighlight-btn projects-btn'}>Projects</button>
-                <button onClick={()=>{jump('#four')}} className={this.props.section===4?'highlight-btn contact-btn':'unhighlight-btn contact-btn'}>Contact</button>
+                <button onClick={()=>{jump('#one', {offset:-12})}} className={this.props.section===1?'highlight-btn about-btn':'unhighlight-btn about-btn'}>About</button>
+                <button onClick={()=>{jump('#two', {offset:-12})}} className={this.props.section===2?'highlight-btn skills-btn':'unhighlight-btn skills-btn'}>Skills</button>
+                <button onClick={()=>{jump('#three', {offset:-12})}} className={this.props.section===3?'highlight-btn projects-btn':'unhighlight-btn projects-btn'}>Projects</button>
+                <button onClick={()=>{jump('#four', {offset:-12})}} className={this.props.section===4?'highlight-btn contact-btn':'unhighlight-btn contact-btn'}>Contact</button>
                 <div className='links'>
                 <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/chase-davis-085aa6134/">
                 <div className='circle_link'>

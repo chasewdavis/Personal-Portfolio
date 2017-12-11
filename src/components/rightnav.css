@@ -4,7 +4,6 @@
   height: 12px;
   position: fixed;
   top: 0;
-  background: #FAFAFA;
   opacity: 1;
   z-index: 5; }
 
@@ -16,7 +15,7 @@
   z-index: 5;
   animation: appear .6s;
   animation-fill-mode: forwards;
-  background: #223450;
+  background: linear-gradient(-45deg, #223450, #243c64);
   width: 388px;
   height: calc(100vh - 24px);
   display: grid;
@@ -103,8 +102,7 @@
   width: 100vw;
   height: 12px;
   position: fixed;
-  bottom: 0;
-  background: #fafafa; }
+  bottom: 0; }
 
 @keyframes fade-in-btns {
   100% {

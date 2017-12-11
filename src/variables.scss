@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Amatic+SC|Josefin+Slab|Kaushan+Script|Nothing+You+Could+Do|Permanent+Marker');
 
 $main_color: rgb(34, 52, 80);
+$main_light: rgb(36, 60, 100);
+$gradient: linear-gradient(-45deg, $main_color, $main_light);
 // $fun_font: 'Amatic SC';
 // $fun_font: 'Josefin Slab';
 // $fun_font: 'Nothing You Could Do';

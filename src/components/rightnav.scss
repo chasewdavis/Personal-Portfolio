@@ -5,7 +5,7 @@
     height: 12px;
     position: fixed;
     top: 0;
-    background: #FAFAFA;
+    // background: #FAFAFA;
     opacity: 1;
     z-index: 5;
 }
@@ -21,7 +21,7 @@
     animation: appear .6s;
     animation-fill-mode: forwards;
     // background-color: rgba(0,0,0,.2);
-    background:$main_color;
+    background:$gradient;
     width: 388px;
     height: calc(100vh - 24px);
     display: grid;
@@ -139,7 +139,7 @@
     height: 12px;
     position: fixed;
     bottom: 0;
-    background: #fafafa;
+    // background: #fafafa;
     // border: 1px solid orangered;
   }
 

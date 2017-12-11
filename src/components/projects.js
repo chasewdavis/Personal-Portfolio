@@ -26,7 +26,7 @@ class Projects extends Component {
 
         let currentProject = this.state.current;
         currentProject === this.state.project.length - 1 ? currentProject = 0 : currentProject++;
-        jump('#three', {duration:500});
+        jump('#three', {duration:500,offset:-12});
         this.setState({current:currentProject});
 
     });
@@ -34,7 +34,7 @@ class Projects extends Component {
     document.getElementsByClassName('slick-prev')[0].addEventListener("click", () => {
       let currentProject = this.state.current;
       currentProject ? currentProject-- : currentProject = this.state.project.length - 1;
-      jump('#three', {duration:500});
+      jump('#three', {duration:500,offset:-12});
       this.setState({current:currentProject}); 
     });
     }

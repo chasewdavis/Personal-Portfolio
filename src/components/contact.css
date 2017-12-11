@@ -1,6 +1,90 @@
+@import url("https://fonts.googleapis.com/css?family=Amatic+SC|Josefin+Slab|Kaushan+Script|Nothing+You+Could+Do|Permanent+Marker");
 .contact_grid {
-  /* height: calc(100% * 2/3); */
+  position: relative;
   width: calc(100% - 400px);
-  height: 100vh;
+  height: calc(100vh - 24px);
   margin-right: 400px;
-  border: 1px solid fuchsia; }
+  display: grid;
+  grid-template-columns: repeat(3, 3FR);
+  grid-template-rows: repeat(10, 10FR); }
+  .contact_grid .background {
+    z-index: -5;
+    grid-column: 1/4;
+    grid-row: 1/9;
+    opacity: .15;
+    background: url("../jpg/paper.jpeg");
+    background-position: center;
+    background-size: cover;
+    display: hidden; }
+  .contact_grid .header {
+    grid-column: 1/4;
+    grid-row: 1/3;
+    display: flex;
+    align-items: center;
+    font-size: 70px;
+    color: #223450;
+    opacity: .4;
+    padding: 12px 50px; }
+  .contact_grid .body {
+    grid-column: 1/4;
+    grid-row: 2/8;
+    display: grid;
+    grid-template-columns: repeat(3, 3FR);
+    grid-template-rows: repeate(1, 1FR);
+    opacity: 1;
+    color: #243c64; }
+    .contact_grid .body h2 {
+      position: absolute;
+      bottom: 0;
+      color: #243c64;
+      font-size: 20px; }
+    .contact_grid .body a {
+      text-decoration: none;
+      color: #243c64; }
+    .contact_grid .body i {
+      cursor: pointer; }
+    .contact_grid .body .left {
+      position: relative;
+      grid-column: 1/2;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      .contact_grid .body .left i {
+        transform: scale(2);
+        transition: transform .5s, opacity .5s; }
+      .contact_grid .body .left:hover i {
+        transform: scale(3);
+        opacity: .2; }
+    .contact_grid .body .middle {
+      position: relative;
+      grid-column: 2/3;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      .contact_grid .body .middle i {
+        transform: scale(2.5);
+        transition: transform .5s, opacity .5s; }
+      .contact_grid .body .middle:hover i {
+        transform: scale(3.2);
+        opacity: .2; }
+    .contact_grid .body .right {
+      position: relative;
+      grid-column: 3/4;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      .contact_grid .body .right i {
+        transform: scale(2);
+        transition: transform .5s, opacity .5s; }
+      .contact_grid .body .right:hover i {
+        transform: scale(3);
+        opacity: .2; }
+  .contact_grid .footer {
+    grid-column: 1/4;
+    grid-row: 9/11;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fafafa;
+    background: #CFD3D8;
+    background: linear-gradient(45deg, #223450, #243c64); }

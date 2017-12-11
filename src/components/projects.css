@@ -1,11 +1,12 @@
 .projects_grid {
   position: relative;
   width: calc(100% - 400px);
-  height: 100vh;
+  height: calc(100vh - 24px);
   margin-right: 400px;
   display: grid;
   grid-template-columns: repeat(18, 18FR);
-  grid-template-rows: repeat(18, 18FR); }
+  grid-template-rows: repeat(18, 18FR);
+  margin-bottom: 24px; }
   .projects_grid .title {
     grid-row: 1/4;
     grid-column: 1/19;

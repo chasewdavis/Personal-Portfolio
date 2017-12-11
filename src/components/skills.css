@@ -1,7 +1,9 @@
 .skills_container {
+  margin-top: 12px;
   width: calc(100% - 400px);
-  height: 100vh;
-  margin-right: 400px; }
+  height: calc(100vh - 24px);
+  margin-right: 400px;
+  margin-bottom: 24px; }
 
 .skills_title {
   margin-top: 55px;

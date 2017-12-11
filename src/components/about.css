@@ -3,9 +3,9 @@
 .about_grid {
   /* margin-left: 60px; */
   width: calc(100% - 400px);
-  height: calc( 100vh);
+  height: calc(100vh - 24px);
   margin-right: 400px;
-  margin-bottom: 12px;
+  margin-bottom: 24px;
   background: whitesmoke;
   background-image: url("../jpg/timp.jpg");
   background-position: center;
