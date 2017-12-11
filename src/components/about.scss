@@ -70,6 +70,7 @@
         // animation: title-appear 1.2s;
         // animation-fill-mode: forwards;
     }
+
     .cover_grid{
         grid-row: 1/6;
         grid-column: 1/6;
@@ -83,6 +84,24 @@
         // background: linear-gradient(180deg, $main_color, white);
         background: black;
         opacity:.1;
+
+    }
+
+    footer{
+        z-index: 5;
+        grid-row: 5/6;
+        grid-column: 1/6;
+        // border:1px solid red;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        i{
+            color: white;
+            opacity: .7;
+            transform: translateY(-25px) scale(1.2);
+            animation: bounce 2s;
+            animation-iteration-count: infinite;
+        }
     }
 }
 
@@ -174,6 +193,20 @@
     100%{
         transform: translateX(0);
         opacity: .5;
+    }
+}
+
+@keyframes bounce {
+
+    0%{
+        transform: translateY(-25px) scale(1.2)
+    }
+
+    50%{
+        transform: translateY(25px) scale(1.35);
+    }
+    100%{
+        transform: translateY(-25px) scale(1.2);
     }
 }
 

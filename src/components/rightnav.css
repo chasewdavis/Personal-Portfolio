@@ -29,7 +29,9 @@
     transform: translateY(-110px);
     border: 5px solid #FAFAFA;
     border-radius: 50%;
-    background: gainsboro;
+    background-image: url("../jpg/me.jpg");
+    background-position: center;
+    background-size: cover;
     z-index: 5; }
   .fixed-right-navbar .img-filler {
     z-index: 1;
