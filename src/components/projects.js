@@ -3,6 +3,7 @@ import './projects.css'
 import jump from 'jump.js';
 // import laptop from '../jpg/laptop.png';
 import SimpleSlider from './carousel.js';
+import { setTimeout } from 'timers';
 
 class Projects extends Component {
 
@@ -16,13 +17,18 @@ class Projects extends Component {
     }
   }
 
+  
+
   componentDidMount(){
     if(document.getElementsByClassName('slick-next')[0]){
     document.getElementsByClassName('slick-next')[0].addEventListener("click", () => { 
-      let currentProject = this.state.current;
-      currentProject === this.state.project.length - 1 ? currentProject = 0 : currentProject++;
-      jump('#three', {duration:500});
-      this.setState({current:currentProject});     
+
+
+        let currentProject = this.state.current;
+        currentProject === this.state.project.length - 1 ? currentProject = 0 : currentProject++;
+        jump('#three', {duration:500});
+        this.setState({current:currentProject});
+
     });
 
     document.getElementsByClassName('slick-prev')[0].addEventListener("click", () => {
