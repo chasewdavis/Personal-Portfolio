@@ -14,8 +14,7 @@
     opacity: .15;
     background: url("../jpg/paper.jpeg");
     background-position: center;
-    background-size: cover;
-    display: hidden; }
+    background-size: cover; }
   .contact_grid .header {
     grid-column: 1/4;
     grid-row: 1/3;

@@ -9,17 +9,13 @@
     left: 50%;
     transform: translate(-460px, calc( ( -575px / 2) + 10px ));
     top:50%;
-    // border: 3px solid blue;
-
     .laptop{
         position: absolute;
         top:0;
         left: 0;
         width: 100%;
-        // z-index: 5;
     }
     .slider{
-        // z-index: 0;
         position: absolute;
         top:49px;
         left: 50%;
@@ -62,7 +58,6 @@
 
     .slick-next{
         width: 100px;
-        // border: 1px solid red;
         height: 100px;
         transform: translate(120px,-50px);
         &::before{
@@ -75,7 +70,6 @@
 
     .slick-prev{
         width: 100px;
-        // border: 1px solid red;
         height: 100px;
         transform: translate(-120px,-50px);
 
@@ -84,7 +78,6 @@
             color: white;
             font-family: FontAwesome;
             font-size: 80px;
-            // transform: translateX(-50px);
         }
     }
       

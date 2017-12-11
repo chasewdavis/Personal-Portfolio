@@ -6,9 +6,7 @@ import './contact.css';
 class Contact extends Component {
 
   render() {
-
-    console.log(this.state)
-
+    
     return (
       
       <div className='contact_grid'>

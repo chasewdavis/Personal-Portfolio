@@ -68,7 +68,6 @@ class App extends Component {
         
       }else{
         if(!state_set_2){
-          console.log('two')
           this.setState({section:2});
           state_set_2 = true;
           state_set_1 = false;
@@ -78,7 +77,6 @@ class App extends Component {
       }
     }else{
       if(!state_set_1){
-        console.log('one')
         this.setState({section:1});
         state_set_1 = true;
         state_set_2 = false;

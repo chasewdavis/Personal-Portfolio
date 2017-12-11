@@ -1,13 +1,6 @@
-/* Ropa+Sans|Varela+Round */
-
 @import '../variables.scss';
 
 .about_grid {
-    /* margin-left: 60px; */
-    // margin-top:12px;
-    // border: 1px solid fuchsia;
-    // position: absolute;
-    // top: 12px;
     width: calc(100% - 400px);
     height: calc(100vh - 24px);
     margin-right: 400px;
@@ -24,20 +17,16 @@
         grid-column: 1/6;
         padding: 25px;
         color:white;
-        // border: 1px solid red;
         display: flex;
         align-items: flex-start;
         justify-content: flex-start;
         flex-direction: column;
         position: relative;
-        // padding-left: 25px;
         h1 {
             font-family: $fun_font;
             opacity: 0;
-            // border:1px solid red;
             font-size: 80px;
             transform: translateX(200px);
-            
             animation: title-appear 1s;
             animation-fill-mode: forwards;
         }
@@ -66,25 +55,14 @@
             right: 45px;
             opacity: .5;
         }
-        // transform: translateX(100%);
-        // animation: title-appear 1.2s;
-        // animation-fill-mode: forwards;
     }
 
     .cover_grid{
         grid-row: 1/6;
         grid-column: 1/6;
         z-index: 0;
-        // background: #547FC3;
-        // background: #7474bf;
-        // background: #348ac7;
-        // background: linear-gradient(90deg, #7474bf, #348ac7, #7474bf);
-        // background: radial-gradient(#348ac7,#7474bf);
-        // background: linear-gradient(45deg, #fe8c00, #f83600, #fe8c00);
-        // background: linear-gradient(180deg, $main_color, white);
         background: black;
         opacity:.1;
-
     }
 
     footer{
@@ -105,85 +83,6 @@
     }
 }
 
-.top_left{
-    z-index: 0;
-    grid-column:2/5;
-    grid-row:2/5;
-    // box-shadow: 0 0 50px rgba(112, 112, 112, 0.2);
-    // box-shadow: 0 0 100px rgba(116,116,191,.8);
-    box-shadow: 0 0 100px rgba(84,127,195,.8);
-
-    border-image-slice: 1;
-    border-radius: 2px;
-
-    background: rgb(250,250,250);
-    // background: rgba(0,0,0,.5);
-    //
-
-    padding:60px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    transform: translateX(150%);
-
-    animation: slide_left 1.2s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease;
-}
-
-.top_left .paragraphs {
-    /* border: 1px solid black; */
-}
-
-.top_left h3{
-    color:rgba(0,0,0,0);
-
-    font-size: 34px;
-    margin-bottom: 25px;
-
-    animation: fade_in_color 2.4s;
-    animation-fill-mode: forwards;
-}
-
-.top_left p{
-    margin-top: 14px;
-    font-size: 30px;
-    color:rgba(0,0,0,0);
-
-    animation: fade_in_dark 2.4s;
-    animation-fill-mode: forwards;
-}
-
-.top_left p span {
-    cursor: pointer;
-    color: rgba(0,0,0,0);
-    text-decoration: none;
-
-    animation: fade_in_color 2.4s;
-    animation-fill-mode: forwards;
-}
-
-.top_right{
-
-}
-
-.bottom_left{
-    
-}
-
-.bottom_right{
-    grid-column:4/5;
-    grid-row:3/5;
-    box-shadow: 0 0 50px rgba(112, 112, 112, 0.2);
-    background: rgb(250,250,250);
-    transform: translateX(-300%);
-    animation: slide_right 1.2s;
-    animation-fill-mode: forwards;
-
-    animation-timing-function: ease;
-
-}
 
 @keyframes title-appear {
     75%{
@@ -210,48 +109,6 @@
     }
 }
 
-// @keyframes fade_in_color {
-//     50%{
-//         color:rgba(0,0,0,0);
-//     }
-//     100%{
-//         color:rgb(73,94,209);
-//         color:#547FC3
-//     }
-// }
-
-// @keyframes fade_in_dark {
-//     50%{
-//         color:rgba(0,0,0,0);
-//     }
-//     100%{
-//         color:rgb(31, 31, 31);
-//     }
-// }
-
-@keyframes slide_left {
-    80%{
-        transform: translateX(-5%)
-    }
-    // 95%{
-    //     transform: translateX(10px)
-    // }
-    100%{
-        transform: translateX(0)
-    }
-}
-
-// @keyframes slide_right {
-//     80%{
-//         transform: translateX(5%)
-//     }
-//     95%{
-//         transform: translateX(-10px)
-//     }
-//     100%{
-//         transform: translateX(0%)
-//     }
-// }
 
 @media (max-width:415px){
     .top_left{

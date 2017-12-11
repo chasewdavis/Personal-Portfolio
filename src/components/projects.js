@@ -17,8 +17,6 @@ class Projects extends Component {
     }
   }
 
-  
-
   componentDidMount(){
     if(document.getElementsByClassName('slick-next')[0]){
     document.getElementsByClassName('slick-next')[0].addEventListener("click", () => { 

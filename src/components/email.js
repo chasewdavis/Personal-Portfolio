@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
+// IF I WANT TO IMPLEMENT NODEMAILER IN THE FUTURE
 
 export default class Contact extends Component {
 
