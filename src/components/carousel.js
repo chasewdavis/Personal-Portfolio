@@ -22,8 +22,8 @@ export default class SimpleSlider extends Component {
             <div className='laptop-parent'>
                 <img className='laptop' src={laptop} alt='laptop'/>
                 <Slider className='slider' {...settings}>
-                    <div className='img_container'><button className='visit'>Visit</button><img src={habits} alt='habits'/></div>
-                    <div className='img_container'><button className='visit'>Visit</button><img src={codewars} alt='codewars'/></div>
+                    <div className='img_container'><a target="_blank" rel="noopener noreferrer" href="http://happyhabits.chasedavis.io" className='visit'>Visit</a><img src={habits} alt='habits'/></div>
+                    <div className='img_container'><a target="_blank" rel="noopener noreferrer" href="http://codewarsclone.chasedavis.io" className='visit'>Visit</a><img src={codewars} alt='codewars'/></div>
                 </Slider>
             </div>
         );  
