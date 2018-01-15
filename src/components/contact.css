@@ -87,3 +87,7 @@
     color: #fafafa;
     background: #CFD3D8;
     background: linear-gradient(45deg, #223450, #243c64); }
+
+@media (max-width: 1400px) {
+  .contact_grid {
+    width: 100%; } }

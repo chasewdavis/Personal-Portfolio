@@ -1,6 +1,13 @@
-const express = require('express')
+const express = require('express');
+const path = require('path');
 
 const app = express();
 
-const PORT = 3005;
-app.listen(PORT, ()=>console.log(`listening on port ${PORT} :)`))
+app.use( express.static( `${__dirname}/../build` ) );
+
+app.get('*', (req, res)=>{
+    res.sendFile(path.join(__dirname, '../build/index.html'));
+})
+
+const PORT = 8085;
+app.listen(PORT, ()=>console.log(`listening on port ${PORT} :)`));

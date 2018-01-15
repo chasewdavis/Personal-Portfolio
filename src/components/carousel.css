@@ -26,6 +26,7 @@
       align-items: center;
       justify-content: center; }
     .laptop-parent .slider .visit {
+      z-index: 5;
       position: absolute;
       width: 668px;
       height: 50px;
@@ -40,7 +41,11 @@
       opacity: 0;
       transition: opacity .5s;
       height: 100%;
-      cursor: pointer; }
+      cursor: pointer;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
       .laptop-parent .slider .visit:hover {
         opacity: .8; }
     .laptop-parent .slider img {

@@ -27,8 +27,9 @@
             align-items: center;
             justify-content: center;
         }
-        // button 
+        // a tag
         .visit{
+            z-index: 5;
             position: absolute;
             width: 668px;
             height: 50px;
@@ -44,6 +45,10 @@
             transition: opacity .5s;
             height: 100%;
             cursor: pointer;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             &:hover{
                 opacity: .8;
             }

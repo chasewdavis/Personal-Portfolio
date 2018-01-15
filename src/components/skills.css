@@ -72,3 +72,7 @@
   .skills_grid .lc6 {
     grid-column: 3/4;
     grid-row: 2/3; }
+
+@media (max-width: 1400px) {
+  .skills_container {
+    width: 100%; } }
