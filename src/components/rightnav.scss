@@ -26,10 +26,6 @@
     height: calc(100vh - 24px);
     display: grid;
 
-
-    // display: hidden;
-
-
     grid-template-rows: repeat(10,10FR);
     grid-template-columns: 1FR; 
       .img-container {
@@ -159,3 +155,16 @@
     color:#FAFAFA;
     }
   }
+
+  @media (max-width: 415px) {
+
+  }
+
+@media (max-width:1400px){
+
+  .fixed-right-navbar{
+    display: none;
+    border: 2px solid fuchsia;
+  }
+
+}

@@ -114,3 +114,8 @@
   100% {
     background: transparent;
     color: #FAFAFA; } }
+
+@media (max-width: 1400px) {
+  .fixed-right-navbar {
+    display: none;
+    border: 2px solid fuchsia; } }

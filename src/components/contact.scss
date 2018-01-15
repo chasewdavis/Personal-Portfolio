@@ -112,3 +112,11 @@
         background: linear-gradient(45deg, $main_color, rgb(36, 60, 100));
     }
 }
+
+@media (max-width:1400px){
+
+    .contact_grid {
+        width: 100%;
+    }
+  
+  }

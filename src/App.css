@@ -120,8 +120,6 @@ button {
 @media (max-width: 1400px) {
   .menu {
     display: flex; }
-  .fixed-right-navbar {
-    display: none; }
   .content_window {
     border-right: 10px solid transparent; } }
 

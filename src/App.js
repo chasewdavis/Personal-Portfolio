@@ -10,6 +10,7 @@ import Skills from './components/skills.js';
 import Projects from './components/projects.js';
 import Contact from './components/contact.js';
 import RightNav from './components/right-nav.js';
+import jump from 'jump.js';
 // import Mail from './svg/mail.js';
 
 //to prevent setting state hundreds more times than we need to
@@ -99,9 +100,15 @@ class App extends Component {
           </div>
           <div className={this.state.open_menu?'open_menu':'close_menu'}>
               <button id='close' onClick={()=>this.setState({open_menu:false})}><X/></button>
-              <button onClick={()=>{this.scroll_to_section('one');this.setState({open_menu:false})}}>Me</button>
+
+              {/* <button onClick={()=>{this.scroll_to_section('one');this.setState({open_menu:false})}}>Me</button>
               <button onClick={()=>{this.scroll_to_section('two');this.setState({open_menu:false})}}>Work</button>
-              <button onClick={()=>{this.scroll_to_section('three');this.setState({open_menu:false})}}>Contact</button>
+              <button onClick={()=>{this.scroll_to_section('three');this.setState({open_menu:false})}}>Contact</button> */}
+
+              <button onClick={()=>{jump('#one', {offset:-12})}} className={this.props.section===1?'highlight-btn about-btn':'unhighlight-btn about-btn'}>Home</button>
+              <button onClick={()=>{jump('#two', {offset:-12})}} className={this.props.section===2?'highlight-btn skills-btn':'unhighlight-btn skills-btn'}>Skills</button>
+              <button onClick={()=>{jump('#three', {offset:-12})}} className={this.props.section===3?'highlight-btn projects-btn':'unhighlight-btn projects-btn'}>Projects</button>
+              <button onClick={()=>{jump('#four', {offset:-12})}} className={this.props.section===4?'highlight-btn contact-btn':'unhighlight-btn contact-btn'}>Contact</button>
           </div>
         
 
