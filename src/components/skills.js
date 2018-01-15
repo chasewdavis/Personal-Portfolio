@@ -9,7 +9,6 @@ import Git from '../svg_skills/git.js';
 
 class Skills extends Component {
 
-
   render() {
 
     return (
