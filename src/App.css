@@ -41,7 +41,8 @@ button {
   width: 60px;
   height: 60px; }
   .menu path {
-    fill: #223450; }
+    fill: #223450;
+    fill: whitesmoke; }
 
 .open_menu {
   position: fixed;
@@ -101,7 +102,7 @@ button {
     width: 160px; }
   100% {
     width: 160px;
-    height: 210px; } }
+    height: 260px; } }
 
 @keyframes appear {
   50% {

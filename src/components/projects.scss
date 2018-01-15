@@ -3,12 +3,12 @@
 .projects_grid{
     position: relative;
     width: calc(100% - 400px);
-    height: calc(100vh - 24px);
+    min-height: calc(100vh - 24px);
     margin-right: 400px;
     display: grid;
     grid-template-columns: repeat(18,18FR);
     grid-template-rows: repeat(18,18FR);
-    // border:1px solid black;
+    // border:3px solid black;
     margin-bottom: 24px;
     .title{
         grid-row: 1/4;
