@@ -22,8 +22,7 @@
   grid-template-rows: 2; }
   .skills_grid .logo_container {
     position: relative;
-    display: inline-block;
-    border: 1px solid fuchsia; }
+    display: inline-block; }
     .skills_grid .logo_container div {
       position: absolute;
       top: 0;
@@ -76,8 +75,7 @@
   @media (max-width: 1024px) {
     .skills_grid .skills_grid {
       grid-template-columns: 2;
-      grid-template-rows: 3;
-      border: 10px solid fuchsia; }
+      grid-template-rows: 3; }
     .skills_grid .lc1 {
       grid-column: 1/2;
       grid-row: 1/2; }

@@ -26,7 +26,7 @@
     .logo_container{
         position: relative;
         display: inline-block;
-        border: 1px solid fuchsia;
+        // border: 1px solid fuchsia;
         div{
             position: absolute;
             top: 0;
@@ -100,7 +100,7 @@
         .skills_grid{
             grid-template-columns: 2;
             grid-template-rows: 3;
-            border: 10px solid fuchsia ;
+            // border: 10px solid fuchsia ;
         }
     
         // grid positioning
