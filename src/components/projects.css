@@ -6,7 +6,6 @@
   display: grid;
   grid-template-columns: repeat(18, 18FR);
   grid-template-rows: repeat(18, 18FR);
-  border: 3px solid black;
   margin-bottom: 24px; }
   .projects_grid .title {
     grid-row: 1/4;
