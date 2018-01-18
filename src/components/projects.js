@@ -12,7 +12,7 @@ class Projects extends Component {
 
     //  MUST ADD TITLE TO PROJECT ARRAY WHEN ADDING NEW PROJECT
     this.state = {
-      project: ['Personal Habit Tracker', 'Code Wars Clone'],
+      project: ['Trivia Arcade in Angular', 'Personal Habit Tracker', 'Code Wars Clone'],
       current: 0
     }
   }
