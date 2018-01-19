@@ -33,7 +33,7 @@ class Contact extends Component {
           </div>
         </div>
         <div className='footer'>
-          Designed and crafted by me, Chase Davis © 2017
+          Designed and crafted by me, Chase Davis © 2018
         </div>
       </div>
      

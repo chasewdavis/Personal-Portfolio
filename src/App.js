@@ -7,7 +7,7 @@ import Menu from './svg/menu.js';
 import X from './svg/close.js';
 import AboutMe from './components/about.js';
 import Skills from './components/skills.js';
-import Projects from './components/projects.js';
+import Projects from './components/projects/projects.js';
 import Contact from './components/contact.js';
 import RightNav from './components/right-nav.js';
 import jump from 'jump.js';
@@ -118,6 +118,7 @@ class App extends Component {
           <div id='two'></div>
           <Skills/>
           <div id='three'></div>
+          {/* <ProjectsWithCar/> */}
           <Projects/>
           <div id='four'></div>
           <Contact/>

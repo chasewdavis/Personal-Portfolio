@@ -10,7 +10,7 @@ class About extends Component {
         <div className='about_grid'>
             <div className='cover_grid'></div>
             <header>
-            <h1><span>C</span>hase<span>D</span>avis</h1>
+            <h1><span>C</span>hase <span>D</span>avis</h1>
             <h2>Stop Wishing. Start Doing.</h2>
             </header>
 
