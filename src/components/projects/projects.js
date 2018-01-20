@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './projects.css';
-import habits from '../../jpg/habits.gif';
-import codewars from '../../jpg/codewars.gif';
-import trivia from '../../jpg/trivia.gif';
+import habits from '../../jpg/habits.png';
+import codewars from '../../jpg/codewars.png';
+import trivia from '../../jpg/trivia.png';
 
 import ReactLogo from '../../svg_skills/react.js';
 import Angular from '../../svg_skills/angular.js';
@@ -21,16 +21,16 @@ class Projects extends Component {
         <div className='projects_grid'>
             <h3 className='header'>Projects</h3>
 
-            <div className='left gif'>
+            <div className='left gif pro2'>
                 <img src={trivia} alt='trivia app'></img>
             </div>
-            <div className='right words'>
+            <div className='right words pro1'>
                 <div className='words_body'>
                     <header>Trivia App</header>
 
                     <div className='links'>
                     <a target="_blank" rel="noopener noreferrer" href="http://trivia.chasedavis.io">Visit Page</a>
-                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/chasewdavis/AngularWithGulp">Checkout Code</a>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/chasewdavis/AngularWithGulp">View Code</a>
                     </div> 
 
                     <div className='description'>Classic Arcade themed trivia app, select category, difficulty, learn fun facts and post high scores for all to see.</div>
@@ -49,7 +49,7 @@ class Projects extends Component {
             </div>
 
 
-            <div className='left words'>
+            <div className='left words pro3'>
 
                 <div className='words_body'>   
 
@@ -57,7 +57,7 @@ class Projects extends Component {
 
                     <div className='links'>
                     <a target="_blank" rel="noopener noreferrer" href="http://codewarsclone.chasedavis.io">Visit Page</a>
-                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/DevMtn-CodeWars/Group-Project">Checkout Code</a>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/DevMtn-CodeWars/Group-Project">View Code</a>
                     </div> 
 
                     <div className='description'>Built to challenge a developer's programming skills across a wide range of categories and difficulties.</div>
@@ -73,21 +73,21 @@ class Projects extends Component {
                     </div>  
                 </div>
             </div>
-            <div className='right gif'>
+            <div className='right gif pro4'>
                 <img src={codewars} alt='codewars app'></img>
             </div>
 
-            <div className='left gif'>
+            <div className='left gif pro6'>
                 <img src={habits} alt='habits app'></img>
             </div>
-            <div className='right words'>
+            <div className='right words pro5'>
                 <div className='words_body'>
 
                     <header>Habit Tracking App</header>
 
                     <div className='links'>
                         <a target="_blank" rel="noopener noreferrer" href="http://happyhabits.chasedavis.io">Visit Page</a>
-                        <a target="_blank" rel="noopener noreferrer" href="https://github.com/chasewdavis/seven-days-personal-project">Checkout Code</a>
+                        <a target="_blank" rel="noopener noreferrer" href="https://github.com/chasewdavis/seven-days-personal-project">View Code</a>
                     </div> 
 
                     <div className='description'>Created in order to track personal or shared goals while challenging friends along the way.</div>
