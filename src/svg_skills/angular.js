@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 
 export default class App extends Component {
+
   render() {
     return (
     
-<svg width="256px" height="272px" viewBox="0 0 256 272" >
+<svg width={this.props.width ? this.props.width : '256px'} viewBox="0 0 256 272" >
 	<g>
 		<path d="M0.0996108949,45.522179 L125.908171,0.697276265 L255.103502,44.7252918 L234.185214,211.175097 L125.908171,271.140856 L19.3245136,211.971984 L0.0996108949,45.522179 Z" fill="#E23237"></path>
 		<path d="M255.103502,44.7252918 L125.908171,0.697276265 L125.908171,271.140856 L234.185214,211.274708 L255.103502,44.7252918 L255.103502,44.7252918 Z" fill="#B52E31"></path>
