@@ -212,3 +212,19 @@
         height: 100vh;
     }
 }
+
+@media (max-width:600px) {
+    .about_grid{
+        header{
+            h1{
+                font-size: 70px;
+                span{
+                    font-size:75px;
+                }
+            }
+            h2{
+                font-size: 30px;
+            }
+        }
+    }
+}

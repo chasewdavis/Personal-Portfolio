@@ -161,3 +161,26 @@
         grid-row: 7/8;
     }
 }
+
+@media (max-width:600px) {
+    .projects_grid{
+        display: flex;
+        flex-direction: column;
+        .header{
+            font-size: 50px;
+        }
+        .gif{
+            // border: 2px solid fuchsia;
+            img{
+                margin: 0;
+                width: 100%;
+            }
+        }
+        .words .words_body{
+            min-height: 300px;
+        }
+        .top_hidden{
+            display: none;
+        }
+    }
+}

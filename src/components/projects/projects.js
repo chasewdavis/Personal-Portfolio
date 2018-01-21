@@ -21,7 +21,7 @@ class Projects extends Component {
         <div className='projects_grid'>
             <h3 className='header'>Projects</h3>
 
-            <div className='left gif pro2'>
+            <div className='left gif pro2 top_hidden'>
                 <img src={trivia} alt='trivia app'></img>
             </div>
             <div className='right words pro1'>
@@ -46,6 +46,9 @@ class Projects extends Component {
                     </div>
 
                 </div>
+            </div>
+            <div className='left gif below_hiden'>
+                <img src={trivia} alt='trivia app'></img>
             </div>
 
 
@@ -77,7 +80,7 @@ class Projects extends Component {
                 <img src={codewars} alt='codewars app'></img>
             </div>
 
-            <div className='left gif pro6'>
+            <div className='left gif pro6 top_hidden'>
                 <img src={habits} alt='habits app'></img>
             </div>
             <div className='right words pro5'>
@@ -103,6 +106,9 @@ class Projects extends Component {
                     </div>
             
                 </div>
+            </div>
+            <div className='left gif pro6 below_hidden'>
+                <img src={habits} alt='habits app'></img>
             </div>
 
         </div>
