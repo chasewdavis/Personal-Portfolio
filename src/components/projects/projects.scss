@@ -1,6 +1,9 @@
 @import "../../variables.scss";
 
 .projects_grid {
+    .below_hidden{
+        display: none;
+    }
     position: relative;
     width: calc(100% - 400px);
     // min-height: calc(100vh - 24px);
@@ -182,6 +185,9 @@
         }
         .top_hidden{
             display: none;
+        }
+        .below_hidden{
+            display: block;
         }
     }
 }

@@ -47,7 +47,7 @@ class Projects extends Component {
 
                 </div>
             </div>
-            <div className='left gif below_hiden'>
+            <div className='left gif below_hidden'>
                 <img src={trivia} alt='trivia app'></img>
             </div>
 
