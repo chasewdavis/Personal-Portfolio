@@ -127,3 +127,11 @@
 @media (max-width: 1400px) {
   .skills_container {
     width: 100%; } }
+
+@media (max-width: 600px) {
+  .skills_container .skills_title {
+    font-size: 50px;
+    text-align: center;
+    margin-left: 0; }
+  .skills_container .skills_grid .logo_container h3 {
+    font-size: 45px; } }

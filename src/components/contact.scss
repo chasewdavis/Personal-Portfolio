@@ -3,7 +3,7 @@
 .contact_grid{
     position: relative;
     width: calc(100% - 400px);
-    height: calc(100vh - 24px);
+    min-height: calc(100vh - 24px);
     margin-right: 400px;
     display: grid;
     grid-template-columns: repeat(3, 3FR);
@@ -33,7 +33,7 @@
         grid-row: 2/8;
         display: grid; 
         grid-template-columns: repeat(3,3FR);
-        grid-template-rows: repeate(1, 1FR);
+        grid-template-rows: repeate(1,1FR);
         opacity: 1;
         color: $main_light;
         h2{
@@ -58,7 +58,7 @@
             i{
                 transform: scale(2);
                 transition: transform .5s, opacity .5s;
-                }
+            }
             &:hover{
                 i{
                 transform: scale(3);
@@ -119,4 +119,64 @@
         width: 100%;
     }
   
-  }
+}
+
+@media (max-width:600px) {
+    .contact_grid{
+        .header{
+            font-size: 50px;
+            // border:1px solid blue;
+            justify-content: center;
+        }
+        .body{
+            grid-template-columns: 1FR 1FR 1FR;
+            grid-template-rows: 1FR;
+            .left {
+                grid-column: 1/2;
+                i{
+                    transform:scale(1.5);
+
+                }
+                &:hover{
+                    i{
+                    transform: scale(1.5);
+                    opacity: 1;
+                    }
+                }
+                h2{
+                    transform: translateY(-50px)
+                }
+            }
+            .middle {
+                grid-column: 2/3;
+                i{
+                    transform:scale(1.5);
+                }
+                &:hover{
+                    i{
+                    transform: scale(1.5);
+                    opacity: 1;
+                    }
+                }
+            }
+            .right {
+                grid-column: 3/4;
+                i{
+                    transform:scale(1.5);
+                }
+                &:hover{
+                    i{
+                    transform: scale(1.5);
+                    opacity: 1;
+                    }
+                }
+                h2{
+                    transform: translateY(-50px)
+                }
+            }
+        }
+    }
+    .footer{
+        font-size: 14px;
+    }
+}

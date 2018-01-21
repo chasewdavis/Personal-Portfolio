@@ -11,6 +11,8 @@
   background: radial-gradient(#243c64, #223450);
   padding: 35px 0;
   margin-bottom: 24px; }
+  .projects_grid .below_hidden {
+    display: none; }
   .projects_grid .header {
     grid-column: 1/4;
     grid-row: 1/2;
@@ -98,3 +100,20 @@
     grid-row: 6/7; }
   .pro6 {
     grid-row: 7/8; } }
+
+@media (max-width: 600px) {
+  .projects_grid {
+    display: flex;
+    flex-direction: column; }
+    .projects_grid .header {
+      font-size: 50px; }
+    .projects_grid .gif img {
+      border-radius: 0;
+      margin: 0;
+      width: 100%; }
+    .projects_grid .words .words_body {
+      min-height: 300px; }
+    .projects_grid .top_hidden {
+      display: none; }
+    .projects_grid .below_hidden {
+      display: block; } }

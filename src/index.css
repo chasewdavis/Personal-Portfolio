@@ -57,3 +57,9 @@ body{
     padding: 12px;
     background: #FAFAFA;
 }
+
+@media (max-width:768px) {
+    body {
+        padding: 0;
+    }
+}

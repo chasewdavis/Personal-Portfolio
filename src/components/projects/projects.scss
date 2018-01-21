@@ -1,6 +1,9 @@
 @import "../../variables.scss";
 
 .projects_grid {
+    .below_hidden{
+        display: none;
+    }
     position: relative;
     width: calc(100% - 400px);
     // min-height: calc(100vh - 24px);
@@ -159,5 +162,32 @@
     }
     .pro6 {
         grid-row: 7/8;
+    }
+}
+
+@media (max-width:600px) {
+    .projects_grid{
+        display: flex;
+        flex-direction: column;
+        .header{
+            font-size: 50px;
+        }
+        .gif{
+            // border: 2px solid fuchsia;
+            img{
+                border-radius: 0;
+                margin: 0;
+                width: 100%;
+            }
+        }
+        .words .words_body{
+            min-height: 300px;
+        }
+        .top_hidden{
+            display: none;
+        }
+        .below_hidden{
+            display: block;
+        }
     }
 }
