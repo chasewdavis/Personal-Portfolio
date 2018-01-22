@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Amatic+SC|Josefin+Slab|Kaushan+Script|Nothing+You+Could+Do|Permanent+Marker|Yesteryear");
+.mobile-vh-fix {
+  border: 2px solid fuchsia;
+  height: viewportHeight; }
+
 .about_grid {
   width: calc(100% - 400px);
   height: calc(100vh - 24px);
