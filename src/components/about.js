@@ -11,8 +11,9 @@ class About extends Component {
     };
     // this function fixes the jumpy mobile browser which doesn't mix well with 100vh.
     if( window.mobilecheck() ){
+      console.log('checking')
       let viewPortHeight = document.getElementsByClassName('about_grid')[0].offsetHeight
-      document.getElementsByClassName('about_grid')[0].setAttribute('style', `height:${viewPortHeight}`);
+      document.getElementsByClassName('about_grid')[0].setAttribute('style', `height:${viewPortHeight}px`);
     }
   }
 
