@@ -16,16 +16,15 @@ class About extends Component {
     };
     // this function fixes the jumpy mobile browser which doesn't mix well with 100vh.
     if( window.mobilecheck() ){
-      console.log('checking')
       let viewPortHeight = document.getElementsByClassName('about_grid')[0].offsetHeight
       document.getElementsByClassName('about_grid')[0].setAttribute('style', `height:${viewPortHeight}px`);
-    }
-    
-    window.addEventListener('scroll', () => this.checkScrollHeight())    
+    }else {
+      window.addEventListener('scroll', () => this.scrollHeight()) 
+    }   
     
   }
 
-  checkScrollHeight(){
+  scrollHeight(){
     var currentHeight = window.scrollY;
     var oneHundred = document.getElementsByClassName('about_grid')[0].offsetHeight;
     var header = document.getElementById('my_header');
