@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
 import './about.css'
+const backgroundWidth = 3147;
+const backgroundHeight = 1776;
+const imgRatio = ( backgroundHeight / backgroundWidth );
+let zoomX = 0;
+let zoomY = 0;
 
 class About extends Component {
 
@@ -15,6 +20,44 @@ class About extends Component {
       let viewPortHeight = document.getElementsByClassName('about_grid')[0].offsetHeight
       document.getElementsByClassName('about_grid')[0].setAttribute('style', `height:${viewPortHeight}px`);
     }
+    
+    window.addEventListener('scroll', () => this.checkScrollHeight())    
+    
+  }
+
+  checkScrollHeight(){
+    var currentHeight = window.scrollY;
+    var oneHundred = document.getElementsByClassName('about_grid')[0].offsetHeight;
+    var header = document.getElementById('my_header');
+    var arrow = document.getElementById('arrow_down_icon');
+    var background = document.getElementsByClassName('about_grid')[0];
+
+    var containerHeight = document.getElementsByClassName('about_grid')[0].offsetHeight;
+    var containerWidth = document.getElementsByClassName('about_grid')[0].offsetWidth;
+
+    var containerRatio = (containerHeight / containerWidth);
+
+    var coverHeight;
+    var coverWidth;
+   
+    if (containerRatio > imgRatio) {
+      coverHeight = containerHeight
+      coverWidth = (containerHeight / imgRatio)
+    } else {
+      coverWidth = containerWidth 
+      coverHeight = (containerWidth * imgRatio)
+    }
+
+    if(currentHeight < oneHundred){
+      let calcOpacity = 1 - ( currentHeight / oneHundred * 2.5 );
+      header.setAttribute('style', `opacity:${calcOpacity}`)
+      arrow.setAttribute('style', `opacity:${calcOpacity}`)
+      
+      zoomX = (currentHeight/oneHundred) * 300 * ( 1 + imgRatio );
+      zoomY = (currentHeight/oneHundred) * 300; 
+
+      background.setAttribute('style', `background-size:${coverWidth + zoomX}px ${coverHeight + zoomY}px`)
+    }
   }
 
   render() {
@@ -23,13 +66,13 @@ class About extends Component {
       
         <div className='about_grid'>
             <div className='cover_grid'></div>
-            <header>
-            <h1><span>C</span>hase <span>D</span>avis</h1>
+            <header id='my_header'>
+            <h1 className='my_name'><span>C</span>hase <span>D</span>avis</h1>
             <h2>Stop Wishing. Start Doing.</h2>
             </header>
 
             <footer>
-              <i className="fa fa-angle-down fa-5x" aria-hidden="true"></i>
+              <i id='arrow_down_icon' className="fa fa-angle-down fa-5x" aria-hidden="true"></i>
             </footer>
 
         </div>
