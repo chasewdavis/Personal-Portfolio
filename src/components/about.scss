@@ -5,10 +5,12 @@
     height: calc(100vh - 24px);
     margin-right: 400px;
     margin-bottom: 24px;
-    background: rgb(245,245,245);
+    // background: rgb(245,245,245) fixed;
+    background: rgba(255,255,255,0);
     background-image: url('../jpg/timp.jpg');
     background-position: center;
     background-size:cover;
+    background-repeat: no-repeat;
     display: grid;
     grid-template-columns: repeat(5, 5FR);
     grid-template-rows: repeat(5, 5FR);
@@ -92,7 +94,6 @@
         justify-content: center;
         i{
             color: white;
-            opacity: .7;
             transform: translateY(-25px) scale(1.3);
             animation: bounce 2s;
             animation-iteration-count: infinite;
