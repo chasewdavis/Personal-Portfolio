@@ -6,6 +6,8 @@ const imgRatio = ( backgroundHeight / backgroundWidth );
 let zoomX = 0;
 let zoomY = 0;
 
+var yScrollPosition;
+
 class About extends Component {
 
   componentDidMount(){
@@ -18,10 +20,10 @@ class About extends Component {
     if( window.mobilecheck() ){
       let viewPortHeight = document.getElementsByClassName('about_grid')[0].offsetHeight
       document.getElementsByClassName('about_grid')[0].setAttribute('style', `height:${viewPortHeight}px`);
-    }else {
-      window.addEventListener('scroll', () => this.scrollHeight()) 
-    }   
+    }
     
+    window.addEventListener('scroll', () => this.scrollHeight()) 
+    // window.addEventListener('DOMContentLoaded', this.scrollLoop, false)
   }
 
   scrollHeight(){
@@ -29,42 +31,61 @@ class About extends Component {
     var oneHundred = document.getElementsByClassName('about_grid')[0].offsetHeight;
     var header = document.getElementById('my_header');
     var arrow = document.getElementById('arrow_down_icon');
-    var background = document.getElementsByClassName('about_grid')[0];
-
     var containerHeight = document.getElementsByClassName('about_grid')[0].offsetHeight;
     var containerWidth = document.getElementsByClassName('about_grid')[0].offsetWidth;
-
     var containerRatio = (containerHeight / containerWidth);
-
     var coverHeight;
     var coverWidth;
+
+    var background = document.getElementsByClassName('about_view_window')[0];
+    var about_text = document.getElementsByClassName('about_text_grid')[0];
+    var frame = document.getElementsByClassName('about_frame')[0];
+
+    var cover_grid = document.getElementsByClassName('cover_grid')[0];
+
+    // about_text.setAttribute('style', `top:${currentHeight}px`);
    
-    if (containerRatio > imgRatio) {
-      coverHeight = containerHeight
-      coverWidth = (containerHeight / imgRatio)
-    } else {
-      coverWidth = containerWidth 
-      coverHeight = (containerWidth * imgRatio)
-    }
+    // if (containerRatio > imgRatio) {
+    //   coverHeight = containerHeight
+    //   coverWidth = (containerHeight / imgRatio)
+    // } else {
+    //   coverWidth = containerWidth 
+    //   coverHeight = (containerWidth * imgRatio)
+    // }
+
+    // console.log(currentHeight, oneHundred)
 
     if(currentHeight < oneHundred){
       let calcOpacity = 1 - ( currentHeight / oneHundred * 2.5 );
       header.setAttribute('style', `opacity:${calcOpacity}`)
       arrow.setAttribute('style', `opacity:${calcOpacity}`)
-      
-      zoomX = (currentHeight/oneHundred) * 300 * ( 1 + imgRatio );
-      zoomY = (currentHeight/oneHundred) * 300; 
 
-      background.setAttribute('style', `background-size:${coverWidth + zoomX}px ${coverHeight + zoomY}px`)
+      about_text.setAttribute('style', `opacity:${-calcOpacity}; top:${currentHeight}px`)
+      frame.setAttribute('style', `top:${currentHeight - 12}px`)
+      if(calcOpacity<0){
+        cover_grid.setAttribute('style', `opacity:${.35 + -calcOpacity / 5}`)
+      }
+      // zoomX = (currentHeight/oneHundred) * 200 * ( 1 + imgRatio );
+      // zoomY = (currentHeight/oneHundred) * 200; 
+      console.log(currentHeight)
+      // background.setAttribute('style', `background-size:${coverWidth + zoomX}px ${coverHeight + zoomY}px`)
+    }else{
+      frame.setAttribute('style', `top:${currentHeight - 12}px; border-bottom:none`)
     }
+
+    
+
+
   }
 
   render() {
 
     return (
-      
+
+      <div className='about_view_window'>
+        <div className='cover_grid'></div>
         <div className='about_grid'>
-            <div className='cover_grid'></div>
+            
             <header id='my_header'>
             <h1 className='my_name'><span>C</span>hase <span>D</span>avis</h1>
             <h2>Stop Wishing. Start Doing.</h2>
@@ -75,6 +96,18 @@ class About extends Component {
             </footer>
 
         </div>
+        <div id='zero'></div>
+        <div className='about_text_grid'>
+          <div className='about_me'>
+            <h4>Hello,</h4> 
+            <h4>I am a web developer from Portland.</h4>
+            
+            <p>I find creative business solutions through building full stack web applications.</p>   
+          </div>
+        </div>
+        <div className='about_frame'>
+        </div>
+      </div>
      
     );
   }
