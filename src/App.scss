@@ -217,8 +217,9 @@ button {
 
 @media (max-width: 1400px) {
   .menu{
-    display: flex;
-    
+    // display: flex;
+    // UNTIL DROP DOWN MENU IS POLISHED //
+    display: none;
   }
 
   .content_window {

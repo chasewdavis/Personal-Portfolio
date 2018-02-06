@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Amatic+SC|Josefin+Slab|Kaushan+Script|Nothing+You+Could+Do|Permanent+Marker|Yesteryear");
+@import url("https://fonts.googleapis.com/css?family=Montserrat|PT+Sans|Ubuntu");
 * {
   box-sizing: border-box;
   font-family: 'Lato', sans-serif; }
@@ -120,7 +121,7 @@ button {
 
 @media (max-width: 1400px) {
   .menu {
-    display: flex; }
+    display: none; }
   .content_window {
     border-right: 10px solid transparent; } }
 

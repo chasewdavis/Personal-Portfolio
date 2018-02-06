@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Amatic+SC|Josefin+Slab|Kaushan+Script|Nothing+You+Could+Do|Permanent+Marker|Yesteryear");
+@import url("https://fonts.googleapis.com/css?family=Montserrat|PT+Sans|Ubuntu");
 .fixed-top {
   width: 100vw;
   height: 12px;
@@ -69,6 +70,7 @@
     border: none;
     border-radius: 0;
     font-size: 40px;
+    font-family: "Ubuntu";
     color: #223450; }
   .fixed-right-navbar .links {
     grid-row: 9/11;
