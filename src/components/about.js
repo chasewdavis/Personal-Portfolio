@@ -7,6 +7,7 @@ import './about.css'
 // let zoomY = 0;
 
 // var yScrollPosition;
+var viewPortHeight;
 
 class About extends Component {
 
@@ -27,7 +28,7 @@ class About extends Component {
     };
     // this function fixes the jumpy mobile browser which doesn't mix well with 100vh.
     if( window.mobilecheck() ){
-      let viewPortHeight = document.getElementsByClassName('about_grid')[0].offsetHeight
+      viewPortHeight = document.getElementsByClassName('about_grid')[0].offsetHeight
       document.getElementsByClassName('about_grid')[0].setAttribute('style', `height:${viewPortHeight}px`);
     }
 
@@ -42,16 +43,23 @@ class About extends Component {
 
   scrollHeight(){
     var currentHeight = window.scrollY;
-    var oneHundred = document.getElementsByClassName('about_grid')[0].offsetHeight;
+    var oneHundred;
+
+    window.innerWidth >= 768 
+    ?
+      oneHundred = document.getElementsByClassName('about_grid')[0].offsetHeight
+    :
+      oneHundred = document.getElementsByClassName('about_grid')[0].offsetHeight - 24
+    ;
     var header = document.getElementById('my_header');
     var arrow = document.getElementById('arrow_down_icon');
     // var containerHeight = document.getElementsByClassName('about_grid')[0].offsetHeight;
     // var containerWidth = document.getElementsByClassName('about_grid')[0].offsetWidth;
     // var containerRatio = (containerHeight / containerWidth);
-    var coverHeight;
-    var coverWidth;
+    // var coverHeight;
+    // var coverWidth;
 
-    var background = document.getElementsByClassName('about_view_window')[0];
+    // var background = document.getElementsByClassName('about_view_window')[0];
     var about_text = document.getElementsByClassName('about_text_grid')[0];
 
     var frame_top = document.getElementsByClassName('smart_border_top')[0];
@@ -76,7 +84,8 @@ class About extends Component {
       header.setAttribute('style', `opacity:${calcOpacity}`)
       arrow.setAttribute('style', `opacity:${calcOpacity}`)
 
-      about_text.setAttribute('style', `opacity:${-calcOpacity}; top:${currentHeight}px`)
+      // about_text.setAttribute('style', `opacity:${-calcOpacity}; top:${currentHeight}px`)
+      about_text.setAttribute('style', `opacity:${-calcOpacity}`)
 
       frame_top.setAttribute('style', 'margin-top:0px')
       frame_bottom.setAttribute('style', 'margin-bottom:0px')
@@ -84,12 +93,21 @@ class About extends Component {
       if(calcOpacity<0){
         cover_grid.setAttribute('style', `opacity:${.35 + -calcOpacity / 4.5}`)
       }
-      // zoomX = (currentHeight/oneHundred) * 200 * ( 1 + imgRatio );
-      // zoomY = (currentHeight/oneHundred) * 200; 
-      // background.setAttribute('style', `background-size:${coverWidth + zoomX}px ${coverHeight + zoomY}px`)
+
     }else{
       frame_top.setAttribute('style', 'margin-top:-12px')
       frame_bottom.setAttribute('style', 'margin-bottom:-12px')
+      cover_grid.setAttribute('style', `opacity:0.68`);
+
+      if(window.innerWidth >= 768){
+        about_text.setAttribute('style', 'position:absolute; top: calc( 100vh - 24px ); opacity:1' )
+      }else{
+        window.mobilecheck 
+        ?
+        about_text.setAttribute('style', `position:absolute; top: calc( ${viewPortHeight}px - 24px ); opacity:1` )
+        :
+        about_text.setAttribute('style', `position:absolute; top: calc( 100vh - 48px ); opacity:1` )
+      }
     }
 
     

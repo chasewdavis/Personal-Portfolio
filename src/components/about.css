@@ -19,8 +19,9 @@
     background: black fixed;
     opacity: .35; }
   .about_view_window .about_text_grid {
-    position: absolute;
-    top: 0;
+    position: fixed;
+    top: 12px;
+    width: calc(100vw - 424px);
     height: calc(100vh - 24px);
     margin-bottom: 24px;
     display: grid;
@@ -136,7 +137,9 @@
 
 @media (max-width: 1400px) {
   .about_view_window {
-    width: 100%; } }
+    width: 100%; }
+    .about_view_window .about_text_grid {
+      width: 100vw; } }
 
 @media (max-width: 1024px) {
   .about_grid header h1 {
@@ -147,9 +150,14 @@
     font-size: 55px; } }
 
 @media (max-width: 768px) {
-  .about_view_window .about_text_grid .about_me {
-    font-size: 1.1em;
-    padding: 0; }
+  .about_grid {
+    margin-bottom: 0; }
+  .about_view_window .about_text_grid {
+    height: 100vh;
+    top: 0; }
+    .about_view_window .about_text_grid .about_me {
+      font-size: 1.1em;
+      padding: 0; }
   .about_frame {
     display: none; } }
 
