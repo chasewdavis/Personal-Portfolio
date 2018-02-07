@@ -4,7 +4,7 @@ export default class App extends Component {
   render() {
     return (
     
-<svg width={this.props.width} viewBox="0 0 547.82666 547.82666"
+<svg viewBox="0 0 547.82666 547.82666"
    id="svg2"
    version="1.1"><defs
      id="defs6" /><g

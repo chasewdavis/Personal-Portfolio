@@ -21,8 +21,8 @@
     background: #fafafa;
     color: rgb(20, 20, 20);
     display: grid;
-    grid-template-columns: 3;
-    grid-template-rows: 2;
+    grid-template-columns: repeat(3, 1FR);
+    grid-template-rows: repeat(2, 1FR);
     .logo_container{
         position: relative;
         display: inline-block;
@@ -51,21 +51,30 @@
         }
         svg {
             margin: 0;
+            // border: 2px solid fuchsia;
             width: 100%;
             height: 100%;
             transition: transform .8s, opacity .5s;
             transform: scale(.68);
         }
+        // for some odd reason this svg is smaller so it will recieve special treatment
+        #react_svg {
+            transform: scale(.82);
+        }
 
         &:hover {
-            div{
+            div {
                 visibility: visible;
                 opacity: 1;
             }
-            svg{
+            svg {
                 transform: scale(.9);
                 opacity: .1;
             }
+            #react_svg {
+                transform: scale(1.08);
+            }
+
         }
     }
     
@@ -95,8 +104,10 @@
         grid-row: 2/3;
     }
 
+
     @media (max-width:1024px){
-    
+        grid-template-columns: repeat(2, 1FR);
+        grid-template-rows: repeat(3, 1FR);
         // grid positioning
         .lc1{
             grid-column: 1/2;
@@ -135,6 +146,9 @@
             svg{
                 transform: scale(.9);
                 opacity: .1;
+            }
+            #react_svg {
+                transform: scale(1.08);
             }
         }
         
