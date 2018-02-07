@@ -7,6 +7,7 @@ import './about.css'
 // let zoomY = 0;
 
 // var yScrollPosition;
+var viewPortHeight;
 
 class About extends Component {
 
@@ -27,7 +28,7 @@ class About extends Component {
     };
     // this function fixes the jumpy mobile browser which doesn't mix well with 100vh.
     if( window.mobilecheck() ){
-      let viewPortHeight = document.getElementsByClassName('about_grid')[0].offsetHeight
+      viewPortHeight = document.getElementsByClassName('about_grid')[0].offsetHeight
       document.getElementsByClassName('about_grid')[0].setAttribute('style', `height:${viewPortHeight}px`);
     }
 
@@ -96,12 +97,17 @@ class About extends Component {
     }else{
       frame_top.setAttribute('style', 'margin-top:-12px')
       frame_bottom.setAttribute('style', 'margin-bottom:-12px')
+      cover_grid.setAttribute('style', `opacity:0.68`);
 
-      window.innerWidth >= 768 
-      ? 
-      about_text.setAttribute('style', 'position:absolute; top: calc( 100vh - 24px ); opacity:1' )
-      : 
-      about_text.setAttribute('style', 'position:absolute; top: calc( 100vh - 48px ); opacity:1' )
+      if(window.innerWidth >= 768){
+        about_text.setAttribute('style', 'position:absolute; top: calc( 100vh - 24px ); opacity:1' )
+      }else{
+        window.mobilecheck 
+        ?
+        about_text.setAttribute('style', `position:absolute; top: calc( ${viewPortHeight}px - 24px ); opacity:1` )
+        :
+        about_text.setAttribute('style', `position:absolute; top: calc( 100vh - 48px ); opacity:1` )
+      }
     }
 
     

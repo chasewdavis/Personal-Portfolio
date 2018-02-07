@@ -98,16 +98,18 @@
       .skills_grid .lc6 {
         grid-column: 2/3;
         grid-row: 3/4; }
-      .skills_grid .logo_container div {
-        visibility: visible;
-        opacity: 1; }
-        .skills_grid .logo_container div p {
-          font-size: 26px; }
-      .skills_grid .logo_container svg {
-        transform: scale(0.9);
-        opacity: .1; }
-      .skills_grid .logo_container #react_svg {
-        transform: scale(1.08); } }
+      .skills_grid .logo_container {
+        overflow: hidden; }
+        .skills_grid .logo_container div {
+          visibility: visible;
+          opacity: 1; }
+          .skills_grid .logo_container div p {
+            font-size: 26px; }
+        .skills_grid .logo_container svg {
+          transform: scale(0.9);
+          opacity: .1; }
+        .skills_grid .logo_container #react_svg {
+          transform: scale(1.08); } }
   @media (max-width: 768px) {
     .skills_grid .logo_container div p {
       font-size: 20px; } }

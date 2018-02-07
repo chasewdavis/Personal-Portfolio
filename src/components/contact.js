@@ -14,6 +14,7 @@ class Contact extends Component {
     // this function fixes the jumpy mobile browser which doesn't mix well with 100vh.
     if( window.mobilecheck() ){
       let viewPortHeight = document.getElementsByClassName('contact_grid')[0].offsetHeight
+      console.log(`on mobile with vp of ${viewPortHeight}`)
       document.getElementsByClassName('contact_grid')[0].setAttribute('style', `height:${viewPortHeight}px`);
     }
   }
