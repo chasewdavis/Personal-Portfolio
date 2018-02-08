@@ -152,12 +152,14 @@
 @media (max-width: 768px) {
   .about_grid {
     margin-bottom: 0; }
-  .about_view_window .about_text_grid {
-    height: 100vh;
-    top: 0; }
-    .about_view_window .about_text_grid .about_me {
-      font-size: 1.1em;
-      padding: 0; }
+  .about_view_window {
+    background-image: url("../jpg/city.jpg"); }
+    .about_view_window .about_text_grid {
+      height: 100vh;
+      top: 0; }
+      .about_view_window .about_text_grid .about_me {
+        font-size: 1.1em;
+        padding: 0; }
   .about_frame {
     display: none; } }
 
