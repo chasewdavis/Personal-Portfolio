@@ -7,6 +7,7 @@ import './about.css'
 // let zoomY = 0;
 
 // var yScrollPosition;
+// viewPortHeight is a substitution for using 100vh which is causes problems in mobile browsers
 var viewPortHeight;
 
 class About extends Component {
@@ -28,8 +29,9 @@ class About extends Component {
     };
     // this function fixes the jumpy mobile browser which doesn't mix well with 100vh.
     if( window.mobilecheck() ){
-      viewPortHeight = document.getElementsByClassName('about_grid')[0].offsetHeight
+      viewPortHeight = document.getElementsByClassName('about_text_grid')[0].offsetHeight
       document.getElementsByClassName('about_grid')[0].setAttribute('style', `height:${viewPortHeight}px`);
+      // document.getElementsByClassName('about_text_grid')[0].setAttribute('style', `height:${viewPortHeight}px`);
     }
 
     window.addEventListener('DOMContentLoaded', this.scrollLoop, false)
@@ -49,8 +51,9 @@ class About extends Component {
     ?
       oneHundred = document.getElementsByClassName('about_grid')[0].offsetHeight
     :
-      oneHundred = document.getElementsByClassName('about_grid')[0].offsetHeight - 24
+      oneHundred = document.getElementsByClassName('about_text_grid')[0].offsetHeight - 48
     ;
+
     var header = document.getElementById('my_header');
     var arrow = document.getElementById('arrow_down_icon');
     // var containerHeight = document.getElementsByClassName('about_grid')[0].offsetHeight;
@@ -59,12 +62,10 @@ class About extends Component {
     // var coverHeight;
     // var coverWidth;
 
-    // var background = document.getElementsByClassName('about_view_window')[0];
+    var background = document.getElementsByClassName('about_view_window')[0];
     var about_text = document.getElementsByClassName('about_text_grid')[0];
-
     var frame_top = document.getElementsByClassName('smart_border_top')[0];
     var frame_bottom = document.getElementsByClassName('smart_border_bottom')[0];
-
     var cover_grid = document.getElementsByClassName('cover_grid')[0];
 
     // about_text.setAttribute('style', `top:${currentHeight}px`);
@@ -80,33 +81,45 @@ class About extends Component {
     // console.log(currentHeight, oneHundred)
 
     if(currentHeight < oneHundred){
-      let calcOpacity = 1 - ( currentHeight / oneHundred * 2.5 );
+      var calcOpacity = 1 - ( currentHeight / oneHundred * 2.5 );
       header.setAttribute('style', `opacity:${calcOpacity}`)
       arrow.setAttribute('style', `opacity:${calcOpacity}`)
 
       // about_text.setAttribute('style', `opacity:${-calcOpacity}; top:${currentHeight}px`)
+      if(window.mobilecheck){
+        about_text.setAttribute('style', `height:${viewPortHeight}px; opacity:${-calcOpacity}`);
+        background.setAttribute('style', `height:${( (viewPortHeight * 2) - 48 )}px`);
+        if(calcOpacity<0){
+          cover_grid.setAttribute('style', `height:${( (viewPortHeight * 2) - 48 )}px; opacity:${.35 + -calcOpacity / 4.5}`)
+        }
+      } else {
       about_text.setAttribute('style', `opacity:${-calcOpacity}`)
+        if(calcOpacity<0){
+          cover_grid.setAttribute('style', `opacity:${.35 + -calcOpacity / 4.5}`)
+        }
+      }
+      // about_view_window.setAttribute('style', `height:${(viewPortHeight * 2)}`)
 
       frame_top.setAttribute('style', 'margin-top:0px')
       frame_bottom.setAttribute('style', 'margin-bottom:0px')
 
-      if(calcOpacity<0){
-        cover_grid.setAttribute('style', `opacity:${.35 + -calcOpacity / 4.5}`)
-      }
+      
 
     }else{
       frame_top.setAttribute('style', 'margin-top:-12px')
       frame_bottom.setAttribute('style', 'margin-bottom:-12px')
-      cover_grid.setAttribute('style', `opacity:0.68`);
 
       if(window.innerWidth >= 768){
         about_text.setAttribute('style', 'position:absolute; top: calc( 100vh - 24px ); opacity:1' )
       }else{
-        window.mobilecheck 
-        ?
-        about_text.setAttribute('style', `position:absolute; top: calc( ${viewPortHeight}px - 24px ); opacity:1` )
-        :
+        if(window.mobilecheck){
+        about_text.setAttribute('style', `height:${viewPortHeight}px; position:absolute; top: calc( ${viewPortHeight - 48}px ); opacity:1` );
+        background.setAttribute('style', `height:${( (viewPortHeight * 2) - 48 )}px`);
+        cover_grid.setAttribute('style', `height:${( (viewPortHeight * 2) - 48 )}px; opacity:0.68`)
+        }else{
         about_text.setAttribute('style', `position:absolute; top: calc( 100vh - 48px ); opacity:1` )
+        cover_grid.setAttribute('style', `opacity:0.68`);
+        }
       }
     }
 
@@ -129,7 +142,7 @@ class About extends Component {
             </header>
 
             <footer>
-              <i id='arrow_down_icon' className="fa fa-angle-down fa-5x" aria-hidden="true"></i>
+              <i id='arrow_down_icon' className="fa fa-angle-down fa-4x" aria-hidden="true"></i>
             </footer>
 
         </div>
