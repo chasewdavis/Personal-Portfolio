@@ -22,7 +22,7 @@ class Projects extends Component {
             <h3 className='header'>Projects</h3>
 
             <div className='left gif pro2 top_hidden'>
-                <img src={trivia} alt='trivia app'></img>
+                <a target="_blank" rel="noopener noreferrer" href="http://trivia.chasedavis.io"><img src={trivia} alt='trivia app'></img></a>
             </div>
             <div className='right words pro1'>
                 <div className='words_body'>
@@ -48,7 +48,7 @@ class Projects extends Component {
                 </div>
             </div>
             <div className='left gif below_hidden'>
-                <img src={trivia} alt='trivia app'></img>
+                <a target="_blank" rel="noopener noreferrer" href="http://trivia.chasedavis.io"><img src={trivia} alt='trivia app'></img></a>
             </div>
 
 
@@ -77,11 +77,11 @@ class Projects extends Component {
                 </div>
             </div>
             <div className='right gif pro4'>
-                <img src={codewars} alt='codewars app'></img>
+                <a target="_blank" rel="noopener noreferrer" href="http://codewarsclone.chasedavis.io"><img src={codewars} alt='codewars app'></img></a>
             </div>
 
             <div className='left gif pro6 top_hidden'>
-                <img src={habits} alt='habits app'></img>
+                <a target="_blank" rel="noopener noreferrer" href="http://happyhabits.chasedavis.io"><img src={habits} alt='habits app'></img></a>
             </div>
             <div className='right words pro5'>
                 <div className='words_body'>
@@ -108,7 +108,7 @@ class Projects extends Component {
                 </div>
             </div>
             <div className='left gif pro6 below_hidden'>
-                <img src={habits} alt='habits app'></img>
+                <a target="_blank" rel="noopener noreferrer" href="http://happyhabits.chasedavis.io"><img src={habits} alt='habits app'></img></a>
             </div>
 
         </div>
