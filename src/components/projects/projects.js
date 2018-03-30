@@ -48,7 +48,7 @@ class Projects extends Component {
                 </div>
             </div>
             <div className='left gif below_hidden'>
-                <img src={trivia} alt='trivia app'></img>
+                <a target="_blank" rel="noopener noreferrer" href="http://trivia.chasedavis.io"><img src={trivia} alt='trivia app'></img></a>
             </div>
 
 
@@ -108,7 +108,7 @@ class Projects extends Component {
                 </div>
             </div>
             <div className='left gif pro6 below_hidden'>
-                <img src={habits} alt='habits app'></img>
+                <a target="_blank" rel="noopener noreferrer" href="http://happyhabits.chasedavis.io"><img src={habits} alt='habits app'></img></a>
             </div>
 
         </div>
