@@ -29,6 +29,7 @@ class About extends Component {
     };
     // this function fixes the jumpy mobile browser which doesn't mix well with 100vh.
     if( window.mobilecheck() ){
+      console.log('on mobile');
       viewPortHeight = document.getElementsByClassName('about_text_grid')[0].offsetHeight
       document.getElementsByClassName('about_grid')[0].setAttribute('style', `height:${viewPortHeight}px`);
       // document.getElementsByClassName('about_text_grid')[0].setAttribute('style', `height:${viewPortHeight}px`);
@@ -86,7 +87,7 @@ class About extends Component {
       arrow.setAttribute('style', `opacity:${calcOpacity}`)
 
       // about_text.setAttribute('style', `opacity:${-calcOpacity}; top:${currentHeight}px`)
-      if(window.mobilecheck){
+      if(window.mobilecheck()){
         about_text.setAttribute('style', `height:${viewPortHeight}px; opacity:${-calcOpacity}`);
         background.setAttribute('style', `height:${( (viewPortHeight * 2) - 48 )}px`);
         if(calcOpacity<0){
