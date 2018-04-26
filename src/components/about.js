@@ -1,10 +1,5 @@
 import React, { Component } from 'react';
 import './about.css'
-// const backgroundWidth = 3147;
-// const backgroundHeight = 1776;
-// const imgRatio = ( backgroundHeight / backgroundWidth );
-// let zoomX = 0;
-// let zoomY = 0;
 
 // var yScrollPosition;
 // viewPortHeight is a substitution for using 100vh which is causes problems in mobile browsers
@@ -56,29 +51,12 @@ class About extends Component {
 
     var header = document.getElementById('my_header');
     var arrow = document.getElementById('arrow_down_icon');
-    // var containerHeight = document.getElementsByClassName('about_grid')[0].offsetHeight;
-    // var containerWidth = document.getElementsByClassName('about_grid')[0].offsetWidth;
-    // var containerRatio = (containerHeight / containerWidth);
-    // var coverHeight;
-    // var coverWidth;
 
     var background = document.getElementsByClassName('about_view_window')[0];
     var about_text = document.getElementsByClassName('about_text_grid')[0];
     var frame_top = document.getElementsByClassName('smart_border_top')[0];
     var frame_bottom = document.getElementsByClassName('smart_border_bottom')[0];
     var cover_grid = document.getElementsByClassName('cover_grid')[0];
-
-    // about_text.setAttribute('style', `top:${currentHeight}px`);
-   
-    // if (containerRatio > imgRatio) {
-    //   coverHeight = containerHeight
-    //   coverWidth = (containerHeight / imgRatio)
-    // } else {
-    //   coverWidth = containerWidth 
-    //   coverHeight = (containerWidth * imgRatio)
-    // }
-
-    // console.log(currentHeight, oneHundred)
 
     if(currentHeight < oneHundred){
       var calcOpacity = 1 - ( currentHeight / oneHundred * 2.5 );
