@@ -1,0 +1,167 @@
+@import '../../variables.scss';
+
+.about_parent {
+    // smaller screens will avoid using vh;
+    height: 200vh;
+    width: calc(100% - 400px);
+    position: relative;
+    color: white;
+    text-shadow: 0 0 50px rgba(0,0,0,95);
+    #about{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: calc(100vh - 24px);
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        font-family: 'Ubuntu';
+        // font-family: 'Lato';
+        h1{ 
+            margin-top: -3.25rem;
+            font-family: inherit;
+            font-size: 7.5rem;
+            span{
+                font-size:8.25rem;
+                font-family: inherit;
+            }
+        }
+        h2{
+            font-family: inherit;
+            font-size: 2.5rem;
+        }
+    }
+    #greet{
+        background-image: url('../../jpg/timp.jpg');
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        height: calc(100vh - 24px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Lato';
+        // position sticky caniuse.com score of 86.17%; 
+        // target audience: senior devs who probably use modern browsers
+        position: -webkit-sticky;
+        position: sticky;
+        top: 12px;
+        #greet_overlay{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: black;
+            opacity: .2;
+            z-index: -1;
+        }
+        #greet_contain{
+            width: 55%;
+            p {
+                font-size: 2.6rem;
+                margin: 1rem;
+            }
+        }
+    }
+}
+
+#down_arrow {
+    position: absolute;
+    bottom: 2.5rem;
+    transition: all 1.6s;
+    &::before, &::after {
+        content: '';
+        position: absolute;
+        transition: inherit;
+        top: 0;
+        width: 2.5rem;
+        height: .4rem;
+        background: white;
+    }
+    &::before{
+        left: 0;   
+        transform-origin: bottom left;
+        transform: rotate(-35deg);
+        border-radius: 0 .2rem .2rem 0;
+    }
+    &::after{
+        right: 0;;
+        transform-origin: bottom right;
+        transform: rotate(35deg);
+        border-radius: .2rem 0 0 .2rem;
+    }
+}
+
+.upDownUp {
+    animation-name: upDownUp;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.fadeOut {
+    animation-play-state: paused;
+    opacity: 0;
+}
+
+@keyframes upDownUp {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-2.5rem);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@media (max-width:1400px){
+
+    .about_parent {
+        width: 100%;
+    }
+  
+}
+
+@media (max-width:800px) {
+    .about_parent{
+        #about{
+            height: 50%; // 50% of the viewPortHeight * 2 === 100vh but without the mobile browser issues
+            h1{
+                font-size: 3.5rem;
+                span{
+                    font-size: 3.7rem;
+                }
+            }
+            h2{
+                font-size: 1.2rem;
+            }
+        }
+        #greet{
+            height: 50%;
+            top: 0;
+            #greet_contain{
+                width: 80%;
+                p {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+
+    #down_arrow{
+        &::before, &::after{
+            width: 1.4rem;
+            height: .25rem;
+        }
+    }
+}
+
+@media (max-width:600px) {
+    // .about_parent {
+        // height: auto; // default, let the content determine your height
+    // }
+}

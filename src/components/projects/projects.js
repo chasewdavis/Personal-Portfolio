@@ -60,7 +60,7 @@ class Projects extends Component {
 
                     <div className='links'>
                     <a target="_blank" rel="noopener noreferrer" href="http://codewarsclone.chasedavis.io">Visit Page</a>
-                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/DevMtn-CodeWars/Group-Project">View Code</a>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/chasewdavis/codewarsclone">View Code</a>
                     </div> 
 
                     <div className='description'>Built to challenge a developer's programming skills across a wide range of categories and difficulties.</div>

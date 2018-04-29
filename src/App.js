@@ -5,11 +5,11 @@ import Menu from './svg/menu.js';
 // import Linkedin from './svg/linkedin.js';
 // import GitHub from './svg/github.js';
 import X from './svg/close.js';
-import AboutMe from './components/about.js';
-import Skills from './components/skills.js';
+import AboutMe from './components/about/about.js';
+import Skills from './components/skills/skills.js';
 import Projects from './components/projects/projects.js';
-import Contact from './components/contact.js';
-import RightNav from './components/right-nav.js';
+import Contact from './components/contact/contact.js';
+import RightNav from './components/right-nav/right-nav.js';
 import jump from 'jump.js';
 // import Mail from './svg/mail.js';
 
