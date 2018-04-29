@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css?family=Amatic+SC|Josefin+Slab|Kaushan+Script|Nothing+You+Could+Do|Permanent+Marker|Yesteryear");
+@import url("https://fonts.googleapis.com/css?family=Montserrat|PT+Sans|Ubuntu");
+.contact {
+  width: calc( 100% - 400px); }
+  .contact header {
+    padding: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 4rem;
+    color: rgba(0, 0, 0, 0.4); }
+  .contact .links {
+    margin-bottom: 1rem;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr 1fr; }
+    .contact .links > a {
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      outline: none;
+      width: 100%;
+      transition: all .6s;
+      border-radius: .15rem;
+      text-decoration: none;
+      box-shadow: 10px 5px 15px rgba(0, 0, 0, 0.05); }
+      .contact .links > a svg {
+        width: 45%;
+        vertical-align: bottom;
+        transition: all .6s;
+        transform: scale(0.95);
+        filter: grayscale(95%); }
+        .contact .links > a svg path {
+          transition: all .6s; }
+      .contact .links > a h3 {
+        position: relative;
+        transition: all .6s;
+        text-decoration: none;
+        color: rgba(0, 0, 0, 0.2);
+        align-self: flex-end;
+        justify-self: flex-end;
+        width: 65%;
+        padding: 1rem;
+        font-size: 1.2rem;
+        border-radius: .2rem; }
+      .contact .links > a:hover {
+        box-shadow: 10px 5px 30px rgba(0, 0, 0, 0.2); }
+        .contact .links > a:hover svg {
+          filter: grayscale(40%); }
+        .contact .links > a:hover h3 {
+          color: #527CC7; }
+  .contact footer {
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fafafa;
+    background: #CFD3D8;
+    background: linear-gradient(45deg, #223450, #243c64); }
+
+@media (max-width: 1400px) {
+  .contact {
+    width: 100%; } }
+
+@media (max-width: 800px) {
+  .contact .links {
+    grid-template-columns: 1fr; }
+    .contact .links > a svg {
+      width: 30%; } }
+
+@media (max-width: 600px) {
+  .contact header {
+    font-size: 3rem; }
+  .contact .links > a h3 {
+    font-size: 1.1rem; }
+  .contact footer {
+    font-size: .7rem; } }
+
+@media (max-width: 350px) {
+  .contact header {
+    font-size: 3rem; }
+  .contact .links > a h3 {
+    font-size: 1.0rem; }
+  .contact footer {
+    font-size: .6rem; } }
